@@ -1,0 +1,5 @@
+[
+    {"name": "this is a character name and it should get cut off when it can't fit anymore", "text": "hi I am typing a paragraph to see how this looks"},
+    {"name": "name2", "text": "text2"},
+    {"name": "name3", "text": "text3"}
+]
