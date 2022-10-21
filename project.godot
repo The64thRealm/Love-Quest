@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "TileMap",
+"class": "Layer1",
+"language": "GDScript",
+"path": "res://scenes/Layer1.gd"
+} ]
+_global_script_class_icons={
+"Layer1": ""
+}
+
 [application]
 
 config/name="Love Quest"
