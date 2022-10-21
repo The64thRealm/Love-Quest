@@ -43,11 +43,11 @@ func updateProgress(delta):
 	updateProgressDisplay()
 
 # lines below were for testing
-func _input(event):
-	if event.is_action_pressed("interact"):
-		addPatience(-10)
-	if event.is_action_pressed("right"):
-		addPatience(10)
+#func _input(event):
+#	if event.is_action_pressed("interact"):
+#		addPatience(-10)
+#	if event.is_action_pressed("right"):
+#		addPatience(10)
 
 func checkPatience():
 	return patience <= progressBar.min_value
