@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/dialog/textboxFrame.png" type="Texture" id=1]
+[ext_resource path="res://assets/dialog/DialogueBox.gd" type="Script" id=2]
+[ext_resource path="res://assets/kenney_fontpackage/Fonts/Kenney Pixel.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="DialogBox" type="Node2D"]
+scale = Vector2( 10, 10 )
+script = ExtResource( 2 )
+dialogFile = "res://assets/dialog/testDialog.json"
+boxWidth = 100
+boxHeight = 100
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 100.0
+margin_bottom = 100.0
+texture = ExtResource( 1 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="Name" type="Label" parent="NinePatchRect"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 9.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 1 )
+
+[node name="Dialog" type="Label" parent="NinePatchRect"]
+margin_left = 5.0
+margin_top = 17.0
+margin_right = 65.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 1 )
