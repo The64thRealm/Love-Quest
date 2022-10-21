@@ -6,11 +6,6 @@ extends Node2D
 
 # var filePath = ""
 export(String, FILE, "*.json") var dialogFile
-export(int) var boxX
-export(int) var boxY
-export(int) var boxWidth
-export(int) var boxHeight
-
 var lines = []
 var currentLine = 0
 
@@ -22,11 +17,9 @@ func _ready():
 
 func play():
 	show()
-	$NinePatchRect.margin_right = max(boxWidth, 10)
-	$NinePatchRect.margin_bottom = max(boxHeight, 10)
-	position.x = boxX
-	position.y = boxY
-	
+	$NinePatchRect/Dialog.margin_right = $NinePatchRect.margin_right - 5
+	$NinePatchRect/Name.margin_right = $NinePatchRect.margin_right - 5
+	$NinePatchRect/Name.margin_bottom = $NinePatchRect.margin_bottom - 5
 	lines = loadDialog()
 
 func nextLine():
