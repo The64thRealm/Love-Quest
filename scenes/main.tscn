@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -2261,6 +2261,14 @@ points = PoolVector2Array( 0, 10.6109, 15.9566, 10.3784, 16, 31.3095, 0, 31.3095
 } ]
 11/z_index = 0
 
+[sub_resource type="GDScript" id=97]
+script/source = "extends TileMap
+
+
+func _ready():
+	pass
+"
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Base" type="TileMap" parent="."]
@@ -2276,7 +2284,7 @@ script = ExtResource( 6 )
 tile_set = SubResource( 53 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -196613, 46, 0, -196612, 11, 0, -196609, 17, 0, -262143, 4, 0, -262142, 5, 0, -262139, 47, 0, -262138, 44, 0, -131078, 38, 0, -131074, 28, 0, -196607, 26, 0, -196606, 8, 0, -196605, 10, 0, -196602, 43, 0, -65542, 19, 0, -65541, 23, 0, -65540, 20, 0, -131071, 6, 0, -131070, 7, 0, 65531, 9, 0, 65534, 9, 0, 1, 9, 0, 131066, 15, 0, 131067, 36, 0, 131068, 37, 0, 131069, 16, 0, 131070, 35, 0, 131071, 0, 0, 65536, 15, 0, 65537, 36, 0, 65538, 37, 0, 196602, 41, 0, 196604, 42, 0, 196605, 39, 0, 196607, 40, 0, 131072, 41, 0, 131074, 42, 0 )
+tile_data = PoolIntArray( -196613, 46, 0, -196612, 11, 0, -196609, 17, 0, -262143, 4, 0, -262142, 5, 0, -262139, 536870956, 0, -262138, 44, 0, -131078, 38, 0, -131074, 28, 0, -196607, 26, 0, -196606, 8, 0, -196605, 10, 0, -196603, 536870955, 0, -196602, 43, 0, -65542, 19, 0, -65541, 23, 0, -65540, 20, 0, -131071, 6, 0, -131070, 7, 0, 65531, 9, 0, 65534, 9, 0, 1, 9, 0, 131066, 15, 0, 131067, 36, 0, 131068, 37, 0, 131069, 16, 0, 131070, 35, 0, 131071, 0, 0, 65536, 15, 0, 65537, 36, 0, 65538, 37, 0, 196602, 41, 0, 196604, 42, 0, 196605, 39, 0, 196607, 40, 0, 131072, 41, 0, 131074, 42, 0 )
 script = ExtResource( 5 )
 
 [node name="Items" type="TileMap" parent="Base/Layer1"]
@@ -2284,6 +2292,7 @@ tile_set = SubResource( 60 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 131066, 2, 0, 131067, 5, 0, 131070, 4, 0, 65537, 5, 0, 65538, 3, 0 )
+script = SubResource( 97 )
 
 [node name="player" parent="Base/Layer1" instance=ExtResource( 2 )]
 position = Vector2( 0, 1 )

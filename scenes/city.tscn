@@ -1,0 +1,1260 @@
+[gd_scene load_steps=70 format=2]
+
+[ext_resource path="res://assets/city tilemap/tilemap_packed.png" type="Texture" id=1]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=69]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "tilemap_packed.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "grass"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 48, 48 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "sidewalk.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 16, 64, 16, 16 )
+2/tile_mode = 2
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 16, 16 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "street.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 240, 176, 48 )
+3/tile_mode = 2
+3/autotile/icon_coordinate = Vector2( 0, 0 )
+3/autotile/tile_size = Vector2( 16, 16 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "water"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 128, 96, 128, 48 )
+4/tile_mode = 2
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 16, 16 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "floor.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 128, 0, 16, 16 )
+5/tile_mode = 2
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 16, 16 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "sidewalk.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 128, 0, 128, 48 )
+6/tile_mode = 2
+6/autotile/icon_coordinate = Vector2( 0, 0 )
+6/autotile/tile_size = Vector2( 16, 16 )
+6/autotile/spacing = 0
+6/autotile/occluder_map = [  ]
+6/autotile/navpoly_map = [  ]
+6/autotile/priority_map = [  ]
+6/autotile/z_index_map = [  ]
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "floor.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 48, 128, 48 )
+7/tile_mode = 2
+7/autotile/icon_coordinate = Vector2( 0, 0 )
+7/autotile/tile_size = Vector2( 16, 16 )
+7/autotile/spacing = 0
+7/autotile/occluder_map = [  ]
+7/autotile/navpoly_map = [  ]
+7/autotile/priority_map = [  ]
+7/autotile/z_index_map = [  ]
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "inv bounds.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 0 )
+8/region = Rect2( 96, 0, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 69 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 69 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 16, 0.141983, 16, 5.79468, 0, 6.11769, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 15.7907, 0, 16, 6.11769, 0, 5.95618, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PoolVector2Array( 16, 0, 16, 16, 12.3991, 16, 12.7221, 8.89443, 0, 8.40991, 0.286194, 0.0116234 )
+
+[sub_resource type="ConvexPolygonShape2D" id=53]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=54]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=55]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=56]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 8.54779, 3.94083, 8.70929, 3.4563, 16, 0, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=57]
+points = PoolVector2Array( 3.6178, 16, 0, 16, 0, 0.193317, 16, 0, 16, 9.07612, 3.2948, 9.56064 )
+
+[sub_resource type="ConvexPolygonShape2D" id=58]
+points = PoolVector2Array( 12.3172, 15.977, 12.3172, 8.22478, 0, 8.06327, 0.0427856, 0, 16, 0, 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=59]
+points = PoolVector2Array( 16, 0, 16, 6.13445, 0, 5.93256, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=60]
+points = PoolVector2Array( 16, 0, 16, 5.56444, 0, 5.72595, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=64]
+points = PoolVector2Array( 0.0195313, 0, 16, 0, 16, 5.40294, 0, 5.56444 )
+
+[sub_resource type="ConvexPolygonShape2D" id=65]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 5.60826, 0, 5.60826 )
+
+[sub_resource type="ConvexPolygonShape2D" id=66]
+points = PoolVector2Array( 16, 0, 16, 6.09277, 0, 5.93126, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=67]
+points = PoolVector2Array( 16, 0, 16, 5.28654, 0, 5.28654, 0, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=34]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=35]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=36]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=37]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=38]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=39]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=40]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=41]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=42]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=43]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=44]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=45]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=46]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=47]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 2.46227, 16, 2.46227, 16, 1.34593, 16, 7.76482, 0, 8.04388 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 0.330093, 2.74135, 16, 3.2995, 16, 8.04388, 0, 8.04388 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 2.46227, 16, 1.9041, 15.8643, 8.32297, 0.793869, 7.76482 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 2.18318, 16, 2.74135, 16, 7.48573, 0, 7.76482 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 4.88164, 15.9566, 4.88164, 16, 9.21609, 0, 9.21609 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 5.79469, 0.0212402, 5.63317, 4.22037, 11.1244, 3.89737, 11.4474, 15.5258, 2.88758, 16, 3.53361, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 0.609161, 5.58759, 15.4005, 6.14575, 14.9676, 15.1254, 1.40118, 15.2869 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 0, 1.92435, 16, 5.63898, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 0, 6.608, 16, 6.4465, 16, 16, 0, 15.9753 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 5.80048, 16, 1.43982, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=61]
+points = PoolVector2Array( 16, 0, 16, 16, 12.1263, 16, 12.2878, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=62]
+points = PoolVector2Array( 2.71513, 0.0872192, 2.55361, 16, 0, 16, 0.131035, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=63]
+points = PoolVector2Array( 9.4874, 0, 9.97192, 2.10303, 15.6246, 2.26453, 16, 4.84862, 11.4255, 5.33314, 11.264, 9.53228, 9.97192, 10.3398, 9.97192, 15.508, 7.54934, 15.9925, 7.38783, 9.04776, 0.766106, 9.37077, 0.766106, 5.97916, 5.28826, 5.01012, 8.03385, 0.164955 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 12.5383, 3.20512, 12.8174, 14.9265, 3.60767, 15.2056, 3.32858, 6.83318, 3.88675, 2.92604 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 5.03874, 4.50806, 10.8995, 4.50806, 11.7456, 13.0645, 3.99332, 13.0645 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 5.46878, 3.38515, 10.1524, 3.54665, 11.7675, 13.56, 4.01523, 13.3985, 4.66124, 8.87634 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 1.42026, 12.9509, 14.1792, 12.6279, 14.6637, 30.7165, 1.25873, 30.3935 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0.946686, 11.4553, 15.1526, 11.3949, 16, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=5]
+0/name = "walls.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 256, 0, 112, 128 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 25 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 1, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 30 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 53 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 6 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 54 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 6 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 55 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 6 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 56 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 57 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 6 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 58 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 7 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 59 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 7 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 60 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 7 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 64 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 65 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 66 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 7 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 67 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "roofs.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 48, 256, 48 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 31 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 31 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 32 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 33 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 34 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 35 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 36 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 37 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 38 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 39 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 8, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 40 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 8, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 41 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 8, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 42 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 9, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 43 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 9, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 44 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 10, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 45 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 10, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 46 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 10, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 47 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "street stuff.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 96, 128, 64 )
+2/tile_mode = 2
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 16, 16 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 13 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 6, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 61 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 62 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 63 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "stoplights.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 48, 240, 64, 16 )
+3/tile_mode = 2
+3/autotile/icon_coordinate = Vector2( 0, 0 )
+3/autotile/tile_size = Vector2( 16, 16 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 17 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "tilemap_packed.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 144, 176, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 2 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "tilemap_packed.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 160, 176, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 22 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "tilemap_packed.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 128, 160, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 24 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+8/name = "tilemap_packed.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 336, 224, 16, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 3 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "tilemap_packed.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 320, 256, 16, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 4 )
+9/shape_one_way = false
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "fences/benches.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 48, 192, 80, 48 )
+10/tile_mode = 2
+10/autotile/icon_coordinate = Vector2( 0, 0 )
+10/autotile/tile_size = Vector2( 16, 16 )
+10/autotile/spacing = 0
+10/autotile/occluder_map = [  ]
+10/autotile/navpoly_map = [  ]
+10/autotile/priority_map = [  ]
+10/autotile/z_index_map = [  ]
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 8 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=68]
+points = PoolVector2Array( 7.17741, 16, 0, 16, 0.555695, 0.207703, 32, 0, 32, 15.7122, 25.1045, 16, 25.1045, 4.24533, 7.33893, 3.92233 )
+
+[sub_resource type="ConvexPolygonShape2D" id=48]
+points = PoolVector2Array( 0.187759, 4.09479, 16, 4.25629, 16, 10.232, 0, 10.0705 )
+
+[sub_resource type="ConvexPolygonShape2D" id=49]
+points = PoolVector2Array( 0, 2.30319, 16, 5.85632, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=50]
+points = PoolVector2Array( 16, 16, 0, 15.7082, 0, 5.69481, 16, 1.81868 )
+
+[sub_resource type="ConvexPolygonShape2D" id=51]
+points = PoolVector2Array( 0, 6.50233, 16, 6.50233, 16, 15.8697, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=6]
+0/name = "doors/windows.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 176, 144, 80, 144 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "big doors.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 112, 240, 64, 16 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 68 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 68 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "garage doors.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 128, 208, 48, 32 )
+2/tile_mode = 2
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 48, 16 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "fans.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 144, 192, 32, 16 )
+3/tile_mode = 2
+3/autotile/icon_coordinate = Vector2( 0, 0 )
+3/autotile/tile_size = Vector2( 16, 16 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "tilemap_packed.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 32, 224, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "tilemap_packed.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 16, 112, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "metal.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 160, 32, 32 )
+6/tile_mode = 2
+6/autotile/icon_coordinate = Vector2( 0, 0 )
+6/autotile/tile_size = Vector2( 16, 16 )
+6/autotile/spacing = 0
+6/autotile/occluder_map = [  ]
+6/autotile/navpoly_map = [  ]
+6/autotile/priority_map = [  ]
+6/autotile/z_index_map = [  ]
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "rope.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 16, 128, 48, 16 )
+7/tile_mode = 2
+7/autotile/icon_coordinate = Vector2( 0, 0 )
+7/autotile/tile_size = Vector2( 16, 16 )
+7/autotile/spacing = 0
+7/autotile/occluder_map = [  ]
+7/autotile/navpoly_map = [  ]
+7/autotile/priority_map = [  ]
+7/autotile/z_index_map = [  ]
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 49 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 49 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 50 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 51 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "tilemap_packed.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 48, 240, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 52 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 52 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "grass"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 128, 48 )
+9/tile_mode = 2
+9/autotile/icon_coordinate = Vector2( 0, 0 )
+9/autotile/tile_size = Vector2( 16, 16 )
+9/autotile/spacing = 0
+9/autotile/occluder_map = [  ]
+9/autotile/navpoly_map = [  ]
+9/autotile/priority_map = [  ]
+9/autotile/z_index_map = [  ]
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "trees.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 256, 176, 112, 48 )
+10/tile_mode = 2
+10/autotile/icon_coordinate = Vector2( 0, 0 )
+10/autotile/tile_size = Vector2( 16, 16 )
+10/autotile/spacing = 0
+10/autotile/occluder_map = [  ]
+10/autotile/navpoly_map = [  ]
+10/autotile/priority_map = [  ]
+10/autotile/z_index_map = [  ]
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "tilemap_packed.png 11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 48, 160, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "tilemap_packed.png 12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 48, 224, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape = SubResource( 48 )
+12/shape_one_way = false
+12/shape_one_way_margin = 1.0
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 48 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+12/z_index = 0
+13/name = "tilemap_packed.png 13"
+13/texture = ExtResource( 1 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 32, 176, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+
+[sub_resource type="TileSet" id=7]
+0/name = "trees.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 256, 176, 112, 48 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.431373, 0.439216, 0.623529, 1 )
+
+[node name="base" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -655376, 536870920, 0, -655375, 536870920, 0, -655374, 536870920, 0, -655373, 536870920, 0, -655372, 536870920, 0, -655371, 536870920, 0, -655370, 536870920, 0, -655369, 536870920, 0, -655368, 536870920, 0, -655367, 536870920, 0, -655366, 536870920, 0, -655365, 536870920, 0, -655364, 536870920, 0, -655363, 536870920, 0, -655362, 536870920, 0, -655361, 536870920, 0, -720896, 536870920, 0, -720895, 536870920, 0, -720894, 536870920, 0, -720893, 536870920, 0, -720892, 536870920, 0, -720891, 536870920, 0, -720890, 536870920, 0, -720889, 536870920, 0, -720888, 536870920, 0, -720887, 536870920, 0, -720886, 536870920, 0, -720885, 536870920, 0, -720884, 536870920, 0, -720883, 536870920, 0, -720882, 536870920, 0, -720881, 536870920, 0, -589840, 536870920, 0, -589839, 6, 65537, -589838, 6, 65537, -589837, 6, 65538, -589836, 3, 131074, -589835, 3, 131075, -589834, 3, 131076, -589833, 6, 65536, -589832, 6, 65537, -589831, 6, 65537, -589830, 6, 65537, -589829, 6, 65537, -589828, 6, 65537, -589827, 6, 65537, -589826, 6, 5, -589825, 6, 131073, -655360, 6, 131073, -655359, 6, 131073, -655358, 6, 131073, -655357, 6, 131073, -655356, 6, 131073, -655355, 6, 131073, -655354, 6, 6, -655353, 6, 65537, -655352, 6, 65537, -655351, 6, 65537, -655350, 6, 65537, -655349, 6, 65537, -655348, 6, 65537, -655347, 6, 65537, -655346, 6, 65537, -655345, 536870920, 0, -524304, 536870920, 0, -524303, 6, 65537, -524302, 6, 65537, -524301, 6, 65538, -524300, 3, 131074, -524299, 3, 131075, -524298, 3, 131076, -524297, 6, 65536, -524296, 6, 65537, -524295, 6, 65537, -524294, 6, 65537, -524293, 6, 65537, -524292, 6, 65537, -524291, 6, 65537, -524290, 6, 65538, -524289, 3, 65541, -589824, 3, 1, -589823, 3, 1, -589822, 3, 1, -589821, 3, 1, -589820, 3, 1, -589819, 3, 65542, -589818, 6, 65536, -589817, 6, 65537, -589816, 6, 65537, -589815, 6, 65537, -589814, 6, 65537, -589813, 6, 65537, -589812, 6, 65537, -589811, 6, 65537, -589810, 6, 65537, -589809, 536870920, 0, -458768, 536870920, 0, -458767, 6, 65537, -458766, 6, 65537, -458765, 6, 65538, -458764, 3, 131074, -458763, 3, 131075, -458762, 3, 131076, -458761, 6, 65536, -458760, 6, 65537, -458759, 6, 65537, -458758, 6, 65537, -458757, 6, 65537, -458756, 6, 65537, -458755, 6, 65537, -458754, 6, 65538, -458753, 3, 131074, -524288, 3, 131081, -524287, 3, 131081, -524286, 3, 131081, -524285, 3, 131081, -524284, 3, 131081, -524283, 3, 131076, -524282, 6, 65536, -524281, 6, 65537, -524280, 6, 65537, -524279, 6, 65537, -524278, 6, 65537, -524277, 6, 65537, -524276, 6, 65537, -524275, 6, 65537, -524274, 6, 65537, -524273, 536870920, 0, -393232, 536870920, 0, -393231, 6, 65537, -393230, 6, 65537, -393229, 6, 65538, -393228, 3, 131074, -393227, 3, 131075, -393226, 3, 131076, -393225, 6, 65536, -393224, 6, 65537, -393223, 6, 65537, -393222, 6, 65537, -393221, 6, 65537, -393220, 6, 65537, -393219, 6, 65537, -393218, 6, 65538, -393217, 3, 131074, -458752, 3, 2, -458751, 3, 131081, -458750, 3, 65546, -458749, 3, 131081, -458748, 3, 2, -458747, 3, 131076, -458746, 6, 65536, -458745, 6, 65537, -458744, 6, 65537, -458743, 6, 65537, -458742, 6, 65537, -458741, 6, 65537, -458740, 6, 65537, -458739, 6, 65537, -458738, 6, 65537, -458737, 536870920, 0, -327696, 536870920, 0, -327695, 6, 65537, -327694, 6, 65537, -327693, 6, 65538, -327692, 3, 131074, -327691, 3, 131075, -327690, 3, 131076, -327689, 6, 65536, -327688, 6, 65537, -327687, 6, 65537, -327686, 6, 65537, -327685, 6, 65537, -327684, 6, 65537, -327683, 6, 65537, -327682, 6, 65538, -327681, 3, 131074, -393216, 3, 131081, -393215, 3, 131081, -393214, 3, 131081, -393213, 3, 131081, -393212, 3, 131081, -393211, 3, 131076, -393210, 6, 65536, -393209, 6, 65537, -393208, 6, 65537, -393207, 6, 65537, -393206, 6, 65537, -393205, 6, 65537, -393204, 6, 65537, -393203, 6, 65537, -393202, 6, 65537, -393201, 536870920, 0, -262160, 536870920, 0, -262159, 6, 65537, -262158, 6, 65537, -262157, 6, 65538, -262156, 3, 131074, -262155, 3, 131075, -262154, 3, 131076, -262153, 6, 65536, -262152, 6, 65537, -262151, 6, 65537, -262150, 6, 65537, -262149, 6, 65537, -262148, 6, 65537, -262147, 6, 65537, -262146, 6, 65538, -262145, 3, 131074, -327680, 3, 65543, -327679, 3, 131073, -327678, 3, 131073, -327677, 3, 131073, -327676, 3, 131073, -327675, 3, 131078, -327674, 6, 65536, -327673, 6, 65537, -327672, 6, 65537, -327671, 6, 65537, -327670, 6, 65537, -327669, 6, 65537, -327668, 6, 65537, -327667, 6, 65537, -327666, 6, 65537, -327665, 536870920, 0, -196624, 536870920, 0, -196623, 6, 131073, -196622, 6, 131073, -196621, 6, 131074, -196620, 3, 65538, -196619, 3, 65539, -196618, 3, 65540, -196617, 6, 131072, -196616, 6, 131073, -196615, 6, 131073, -196614, 6, 131073, -196613, 6, 131073, -196612, 6, 131073, -196611, 6, 131073, -196610, 6, 131074, -196609, 3, 65538, -262144, 3, 65540, -262143, 6, 131075, -262142, 6, 131076, -262141, 6, 131076, -262140, 6, 131076, -262139, 6, 131076, -262138, 6, 131073, -262137, 6, 131073, -262136, 6, 6, -262135, 6, 65537, -262134, 6, 65537, -262133, 6, 65537, -262132, 6, 65537, -262131, 6, 65537, -262130, 6, 65537, -262129, 536870920, 0, -131088, 536870920, 0, -131087, 3, 1, -131086, 3, 1, -131085, 3, 0, -131084, 3, 131080, -131083, 3, 131081, -131082, 3, 131079, -131081, 3, 0, -131080, 3, 1, -131079, 3, 1, -131078, 3, 1, -131077, 3, 1, -131076, 3, 1, -131075, 3, 1, -131074, 3, 1, -131073, 3, 131080, -196608, 3, 131079, -196607, 3, 1, -196606, 3, 1, -196605, 3, 1, -196604, 3, 0, -196603, 3, 1, -196602, 3, 1, -196601, 3, 65542, -196600, 6, 65536, -196599, 6, 65537, -196598, 6, 65537, -196597, 6, 65537, -196596, 6, 65537, -196595, 6, 65537, -196594, 6, 65537, -196593, 536870920, 0, -65552, 536870920, 0, -65551, 3, 65537, -65550, 3, 65537, -65549, 3, 65536, -65548, 3, 131081, -65547, 3, 2, -65546, 3, 131081, -65545, 3, 65536, -65544, 3, 65537, -65543, 3, 65537, -65542, 3, 65537, -65541, 3, 65537, -65540, 3, 65537, -65539, 3, 65537, -65538, 3, 65537, -65537, 3, 65537, -131072, 3, 65537, -131071, 3, 65537, -131070, 3, 65537, -131069, 3, 65537, -131068, 3, 65536, -131067, 3, 65545, -131066, 3, 2, -131065, 3, 131076, -131064, 6, 65536, -131063, 6, 65537, -131062, 6, 65537, -131061, 6, 65537, -131060, 6, 65537, -131059, 6, 65537, -131058, 6, 65537, -131057, 536870920, 0, -16, 536870920, 0, -15, 3, 131073, -14, 3, 131073, -13, 3, 131072, -12, 3, 131073, -11, 3, 131073, -10, 3, 131073, -9, 3, 131072, -8, 3, 131073, -7, 3, 131073, -6, 3, 131073, -5, 3, 131073, -4, 3, 131073, -3, 3, 131073, -2, 3, 131073, -1, 3, 131073, -65536, 3, 131073, -65535, 3, 131073, -65534, 3, 131073, -65533, 3, 131073, -65532, 3, 131072, -65531, 3, 65544, -65530, 3, 65545, -65529, 3, 131076, -65528, 6, 65536, -65527, 6, 65537, -65526, 6, 65537, -65525, 6, 65537, -65524, 6, 65537, -65523, 6, 65537, -65522, 6, 65537, -65521, 536870920, 0, 65520, 536870920, 0, 65521, 6, 1, 65522, 6, 1, 65523, 6, 1, 65524, 6, 1, 65525, 6, 1, 65526, 6, 1, 65527, 6, 1, 65528, 6, 1, 65529, 6, 1, 65530, 6, 1, 65531, 6, 1, 65532, 6, 1, 65533, 6, 1, 65534, 6, 1, 65535, 6, 1, 0, 6, 1, 1, 6, 1, 2, 6, 1, 3, 6, 1, 4, 6, 2, 5, 3, 65538, 6, 3, 65539, 7, 3, 65540, 8, 6, 65536, 9, 6, 65537, 10, 6, 65537, 11, 6, 65537, 12, 6, 65537, 13, 6, 65537, 14, 6, 65537, 15, 536870920, 0, 131056, 536870920, 0, 131057, 6, 131073, 131058, 6, 131073, 131059, 6, 131073, 131060, 6, 131073, 131061, 6, 131073, 131062, 6, 131073, 131063, 6, 131073, 131064, 6, 131073, 131065, 6, 131073, 131066, 6, 131073, 131067, 6, 131073, 131068, 6, 131073, 131069, 6, 131073, 131070, 6, 131073, 131071, 6, 131073, 65536, 6, 131073, 65537, 6, 131073, 65538, 6, 131073, 65539, 6, 6, 65540, 6, 65538, 65541, 3, 131074, 65542, 3, 131075, 65543, 3, 131076, 65544, 6, 65536, 65545, 6, 65537, 65546, 6, 65537, 65547, 6, 65537, 65548, 6, 65537, 65549, 6, 65537, 65550, 6, 65537, 65551, 536870920, 0, 196592, 536870920, 0, 196593, 7, 1, 196594, 7, 1, 196595, 7, 1, 196596, 7, 1, 196597, 7, 1, 196598, 7, 1, 196599, 7, 1, 196600, 7, 1, 196601, 7, 1, 196602, 7, 1, 196603, 7, 1, 196604, 7, 1, 196605, 7, 1, 196606, 7, 1, 196607, 7, 1, 131072, 7, 1, 131073, 7, 1, 131074, 7, 2, 131075, 6, 65536, 131076, 6, 65538, 131077, 3, 131074, 131078, 3, 131075, 131079, 3, 131076, 131080, 6, 65536, 131081, 6, 65537, 131082, 6, 65537, 131083, 3, 131074, 131084, 3, 131076, 131085, 6, 65537, 131086, 6, 65537, 131087, 536870920, 0, 262128, 536870920, 0, 262129, 7, 65537, 262130, 7, 65537, 262131, 7, 65537, 262132, 7, 65537, 262133, 7, 65537, 262134, 7, 65537, 262135, 7, 65537, 262136, 7, 65537, 262137, 7, 65537, 262138, 7, 65537, 262139, 7, 65537, 262140, 7, 65537, 262141, 7, 65537, 262142, 7, 65537, 262143, 7, 65537, 196608, 7, 65537, 196609, 7, 65537, 196610, 7, 65538, 196611, 6, 65536, 196612, 6, 65538, 196613, 3, 131074, 196614, 3, 131075, 196615, 3, 131076, 196616, 6, 65536, 196617, 6, 65537, 196618, 6, 65538, 196619, 536870915, 65545, 196620, 536870915, 65545, 196621, 6, 65536, 196622, 6, 65537, 196623, 536870920, 0, 327664, 536870920, 0, 327665, 7, 65537, 327666, 7, 65537, 327667, 7, 65537, 327668, 7, 65537, 327669, 7, 65537, 327670, 7, 65537, 327671, 7, 65537, 327672, 7, 65537, 327673, 7, 65537, 327674, 7, 65537, 327675, 7, 65537, 327676, 7, 65537, 327677, 7, 65537, 327678, 7, 65537, 327679, 7, 65537, 262144, 7, 65537, 262145, 7, 65537, 262146, 7, 65538, 262147, 6, 65536, 262148, 6, 65538, 262149, 3, 65538, 262150, 3, 65539, 262151, 3, 65540, 262152, 6, 131072, 262153, 6, 131073, 262154, 6, 131074, 262155, 536870915, 65545, 262156, 536870915, 65545, 262157, 6, 131072, 262158, 6, 131073, 262159, 536870920, 0, 393200, 536870920, 0, 393201, 7, 65537, 393202, 7, 65537, 393203, 7, 65537, 393204, 7, 65537, 393205, 7, 65537, 393206, 7, 65537, 393207, 7, 65537, 393208, 7, 65537, 393209, 7, 65537, 393210, 7, 65537, 393211, 7, 65537, 393212, 7, 65537, 393213, 7, 65537, 393214, 7, 65537, 393215, 7, 65537, 327680, 7, 65537, 327681, 7, 65537, 327682, 7, 65538, 327683, 6, 65536, 327684, 6, 65538, 327685, 3, 131074, 327686, 3, 65545, 327687, 3, 131079, 327688, 3, 0, 327689, 3, 1, 327690, 3, 1, 327691, 536870915, 1, 327692, 536870915, 1, 327693, 3, 1, 327694, 3, 1, 327695, 536870920, 0, 458736, 536870920, 0, 458737, 536870919, 131073, 458738, 536870919, 131073, 458739, 7, 6, 458740, 7, 65537, 458741, 7, 65537, 458742, 7, 65537, 458743, 7, 65537, 458744, 7, 65537, 458745, 7, 65537, 458746, 7, 65537, 458747, 7, 65537, 458748, 7, 65537, 458749, 7, 65537, 458750, 7, 65537, 458751, 7, 65537, 393216, 7, 65537, 393217, 7, 65537, 393218, 7, 65538, 393219, 6, 65536, 393220, 6, 65538, 393221, 3, 131074, 393222, 3, 2, 393223, 3, 131081, 393224, 3, 65536, 393225, 3, 65537, 393226, 3, 65537, 393227, 3, 65537, 393228, 3, 65537, 393229, 3, 65537, 393230, 3, 65537, 393231, 536870920, 0, 524272, 536870920, 0, 524273, 4, 65537, 524274, 4, 65537, 524275, 7, 65536, 524276, 7, 65537, 524277, 7, 65537, 524278, 7, 65537, 524279, 7, 65537, 524280, 7, 65537, 524281, 7, 65537, 524282, 7, 65537, 524283, 7, 65537, 524284, 7, 65537, 524285, 7, 65537, 524286, 7, 65537, 524287, 7, 65537, 458752, 7, 65537, 458753, 7, 65537, 458754, 7, 65538, 458755, 6, 65536, 458756, 6, 65538, 458757, 3, 131077, 458758, 3, 131073, 458759, 3, 131073, 458760, 3, 131072, 458761, 3, 131073, 458762, 3, 131073, 458763, 3, 131073, 458764, 3, 131073, 458765, 3, 131073, 458766, 3, 131073, 458767, 536870920, 0, 589808, 536870920, 0, 589809, 4, 65537, 589810, 4, 65537, 589811, 7, 131072, 589812, 7, 131073, 589813, 7, 131073, 589814, 7, 131073, 589815, 7, 131073, 589816, 7, 131073, 589817, 7, 131073, 589818, 7, 131073, 589819, 7, 131073, 589820, 7, 131073, 589821, 7, 131073, 589822, 7, 131073, 589823, 7, 131073, 524288, 7, 131073, 524289, 7, 131073, 524290, 7, 131074, 524291, 6, 131072, 524292, 6, 131073, 524293, 6, 131076, 524294, 6, 131076, 524295, 6, 131076, 524296, 6, 131076, 524297, 6, 131076, 524298, 6, 131076, 524299, 6, 131076, 524300, 6, 131076, 524301, 6, 131076, 524302, 6, 131076, 524303, 536870920, 0, 655344, 536870920, 0, 655345, 4, 65537, 655346, 4, 65537, 655347, 4, 65537, 655348, 4, 65537, 655349, 4, 65537, 655350, 4, 65537, 655351, 4, 65537, 655352, 4, 65537, 655353, 4, 65537, 655354, 4, 65537, 655355, 4, 65537, 655356, 4, 65537, 655357, 4, 65537, 655358, 4, 65537, 655359, 4, 65537, 589824, 4, 65537, 589825, 4, 65537, 589826, 4, 65537, 589827, 4, 65537, 589828, 4, 65537, 589829, 4, 65537, 589830, 4, 65537, 589831, 4, 65537, 589832, 4, 65537, 589833, 4, 65537, 589834, 4, 65537, 589835, 4, 65537, 589836, 4, 65537, 589837, 4, 65537, 589838, 4, 65537, 589839, 536870920, 0, 720880, 536870920, 0, 720881, 536870920, 0, 720882, 536870920, 0, 720883, 536870920, 0, 720884, 536870920, 0, 720885, 536870920, 0, 720886, 536870920, 0, 720887, 536870920, 0, 720888, 536870920, 0, 720889, 536870920, 0, 720890, 536870920, 0, 720891, 536870920, 0, 720892, 536870920, 0, 720893, 536870920, 0, 720894, 536870920, 0, 720895, 536870920, 0, 655360, 536870920, 0, 655361, 536870920, 0, 655362, 536870920, 0, 655363, 536870920, 0, 655364, 536870920, 0, 655365, 536870920, 0, 655366, 536870920, 0, 655367, 536870920, 0, 655368, 536870920, 0, 655369, 536870920, 0, 655370, 536870920, 0, 655371, 536870920, 0, 655372, 536870920, 0, 655373, 536870920, 0, 655374, 536870920, 0, 655375, 536870920, 0 )
+
+[node name="buildings and stuff" type="TileMap" parent="base"]
+tile_set = SubResource( 5 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -589839, 1, 65545, -589838, 1, 65546, -589837, 5, 0, -589836, 2, 196614, -589835, 2, 196614, -589834, 2, 196614, -589833, 5, 0, -589829, 1, 0, -589828, 1, 1, -589827, 1, 2, -589826, 536870914, 2, -655360, 8, 0, -655356, 9, 0, -655354, 2, 2, -524303, 1, 131081, -524302, 1, 131082, -524296, 1, 0, -524295, 1, 1, -524294, 1, 2, -524293, 1, 65536, -524292, 1, 65537, -524291, 1, 65538, -524290, 536870914, 65538, -589818, 2, 65538, -589817, 1, 8, -589816, 1, 9, -589815, 1, 9, -589814, 1, 9, -589813, 1, 9, -589812, 1, 9, -589811, 1, 9, -589810, 1, 10, -458767, 0, 131077, -458766, 0, 131075, -458760, 1, 65536, -458759, 1, 65537, -458758, 1, 65538, -458757, 1, 131072, -458756, 1, 131073, -458755, 1, 131074, -524281, 1, 131080, -524280, 1, 131081, -524279, 1, 14, -524278, 1, 65545, -524277, 1, 65545, -524276, 1, 65545, -524275, 1, 65545, -524274, 1, 65546, -393231, 0, 131077, -393230, 0, 131075, -393224, 1, 131072, -393223, 1, 131073, -393222, 1, 131074, -393221, 0, 393221, -393220, 0, 393221, -393219, 0, 393219, -458745, 0, 131073, -458744, 0, 131077, -458743, 1, 65544, -458742, 1, 65545, -458741, 1, 65545, -458740, 1, 65545, -458739, 1, 65545, -458738, 1, 65546, -327695, 0, 131077, -327694, 0, 131075, -327688, 0, 393217, -327687, 0, 393221, -327686, 0, 393221, -327685, 0, 393221, -327684, 0, 393221, -327683, 0, 393219, -393209, 0, 131073, -393208, 0, 131077, -393207, 1, 65544, -393206, 1, 65545, -393205, 1, 65545, -393204, 1, 65545, -393203, 1, 65545, -393202, 1, 65546, -262159, 0, 196610, -262158, 0, 196611, -262157, 536870915, 0, -262152, 0, 458753, -262151, 0, 458754, -262150, 0, 458754, -262149, 0, 458754, -262148, 0, 458754, -262147, 0, 458755, -262146, 10, 65537, -262145, 10, 65539, -327680, 10, 65537, -327679, 10, 65538, -327678, 10, 65538, -327677, 10, 65538, -327676, 10, 65538, -327675, 10, 65538, -327674, 10, 65539, -327673, 0, 196609, -327672, 0, 196610, -327671, 1, 131080, -327670, 1, 131081, -327669, 1, 131081, -327668, 1, 131081, -327667, 1, 131081, -327666, 1, 131082, -196622, 5, 0, -196621, 536870914, 65538, -196611, 6, 0, -262137, 2, 65538, -262135, 0, 131073, -262134, 0, 131077, -262133, 0, 131077, -262132, 0, 131077, -262131, 0, 131077, -262130, 0, 131075, -131086, -1073741822, 196614, -196599, 0, 196609, -196598, 0, 196613, -196597, 0, 196613, -196596, 0, 196613, -196595, 0, 196613, -196594, 0, 196611, -65550, -1073741822, 196614, -14, -1073741822, 196614, -10, 3, 2, -65528, 3, 1, -65526, 1, 0, -65525, 1, 1, -65524, 1, 1, -65523, 1, 2, 65522, 5, 0, 65526, 2, 65538, 8, 2, 65538, 10, 1, 131072, 11, 1, 131073, 12, 1, 131073, 13, 1, 131074, 131059, 1, 8, 131060, 1, 9, 131061, 1, 9, 131062, 1, 9, 131063, 1, 9, 131064, 1, 9, 131065, 1, 9, 131066, 1, 10, 131067, 4, 0, 131068, 4, 0, 131069, 4, 0, 65546, 0, 393217, 65547, 0, 393221, 65548, 0, 393221, 65549, 0, 393219, 196595, 1, 65544, 196596, 1, 65545, 196597, 1, 65545, 196598, 1, 65545, 196599, 1, 65545, 196600, 1, 65545, 196601, 1, 65545, 196602, 1, 65546, 196606, 1, 8, 196607, 1, 9, 131072, 1, 9, 131073, 1, 10, 131082, 0, 458753, 131085, 0, 458755, 262131, 1, 131080, 262132, 1, 131081, 262133, 1, 131081, 262134, 1, 14, 262135, 1, 65545, 262136, 1, 65545, 262137, 1, 65545, 262138, 1, 65546, 262142, 1, 131080, 262143, 1, 131081, 196608, 1, 131081, 196609, 1, 131082, 196616, 2, 5, 327667, 0, 196609, 327668, 0, 196610, 327669, 0, 196610, 327670, 1, 131080, 327671, 1, 131081, 327672, 1, 131081, 327673, 1, 131081, 327674, 1, 131082, 327676, 1, 8, 327677, 1, 9, 327678, 0, 196609, 327679, 0, 196610, 262144, 0, 196610, 262145, 0, 196611, 262146, 10, 65536, 262152, 2, 65541, 262158, 5, 0, 393206, 0, 131073, 393207, 0, 131077, 393208, 0, 131077, 393209, 0, 131077, 393210, 0, 131075, 393212, 1, 131080, 393213, 1, 131081, 393214, 1, 131081, 393215, 1, 131081, 327680, 1, 131081, 327681, 1, 131082, 327682, 10, 65536, 327694, -1610612734, 196614, 458737, 2, 131074, 458738, 2, 131075, 458739, 2, 131076, 458742, 0, 196609, 458743, 0, 196610, 458744, 0, 196610, 458745, 0, 196610, 458746, 0, 196611, 458748, 0, 196609, 458749, 0, 196613, 458750, 0, 196613, 458751, 0, 196613, 393216, 0, 196613, 393217, 0, 196611, 393230, -1610612734, 196614, 524275, 2, 131076, 458766, -1610612734, 196614, 589811, 2, 131076, 589812, 2, 131074, 589813, 2, 131074, 589814, 2, 131074, 589815, 2, 131074, 589816, 2, 131074, 589817, 2, 131074, 589818, 2, 131074, 589819, 2, 131074, 589820, 2, 131074, 589821, 2, 131074, 589822, 2, 131074, 589823, 2, 131074, 524288, 2, 131074, 524289, 2, 131074, 524290, 2, 131072, 524291, 2, 131073, 524292, 2, 131074, 524293, 2, 131074, 524294, 2, 131074, 524295, 2, 131074, 524296, 2, 131074, 524297, 2, 131074, 524298, 2, 131074, 524299, 2, 131074, 524300, 2, 131074, 524301, 2, 131074, 524302, 5, 0 )
+
+[node name="addons" type="TileMap" parent="base/buildings and stuff"]
+tile_set = SubResource( 6 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -524278, 5, 0, -524277, 536870916, 0, -524276, 4, 0, -524275, 5, 0, -393231, 536870912, 196609, -393221, -536870899, 0, -393220, -536870899, 0, -393219, -536870899, 0, -458742, 536870915, 0, -458739, 536870915, 0, -327695, 1610612736, 196609, -327688, -536870899, 0, -327687, -536870899, 0, -327686, -536870899, 0, -327684, 0, 524290, -393208, 1610612736, 524289, -393206, 5, 0, -393205, 536870916, 0, -393204, 4, 0, -393203, 5, 0, -262151, 0, 196612, -327673, 8, 0, -262134, 1610612736, 524289, -262133, 1610612736, 524289, -196595, 0, 65536, 65547, 536870918, 65537, 65548, 536870918, 65537, 196596, 536870912, 0, 196598, 536870923, 0, 196599, 9, 131075, 196600, 9, 1, 196601, 9, 2, 196607, 0, 0, 131072, 536870915, 1, 131083, 536870913, 1, 262136, 9, 131072, 262137, 9, 131074, 327668, 12, 0, 262144, 0, 65537, 393207, 536870918, 65537, 393208, 536870918, 65537, 393209, 536870918, 65537, 458743, 536870914, 65536, 458749, 0, 458753, 458750, 0, 458753, 458751, 536870913, 0, 589811, 536870919, 2, 524290, 7, 2, 524302, 536870919, 1 )
+
+[node name="trees" type="TileMap" parent="base/buildings and stuff/addons"]
+tile_set = SubResource( 7 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 131064, 0, 1, 196600, 0, 131073, 196601, 0, 65542 )
+
+[node name="player" parent="base" instance=ExtResource( 2 )]
+position = Vector2( -104, -65 )
+
+[node name="Camera2D" type="Camera2D" parent="base/player"]
+current = true
+zoom = Vector2( 0.23, 0.23 )

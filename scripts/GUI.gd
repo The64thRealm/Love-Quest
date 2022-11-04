@@ -10,7 +10,7 @@ func _process(delta):
 				print("Nothing to do here")
 				pass
 			"Open":
-				print("I'm getting outta here")
+				get_tree().change_scene("res://scenes/city.tscn")
 				pass
 
 func OnDoorAreaEntered(body):
