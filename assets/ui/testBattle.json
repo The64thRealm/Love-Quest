@@ -9,7 +9,7 @@
     },
     {
         "text": "testing that everything remains the same",
-        "actions": [{"actionText": "action3", "addPatience": -10}, {"actionText": "action4", "addPatience": 20}]
+        "actions": [{"actionText": "action3", "addPatience": -10, "skipToLine": 7}, {"actionText": "action4", "addPatience": 20}]
     },
     {
         "patienceDecay": 20,
@@ -22,5 +22,18 @@
         "name": "name2",
         "text": "more text",
         "actions": [{"actionText": "action5", "addPatience": -10}, {"actionText": "idk", "addPatience": 10}]
+    },
+    {
+        "patienceDecay": 1,
+        "enemySprite": "TempSprite1.png",
+        "name": "stuff",
+        "text": ""
+    },
+    {},
+    {},
+    {
+        
+        "clear": true,
+        "text": "line 7"
     }
 ]

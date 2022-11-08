@@ -27,17 +27,33 @@ func advanceLine():
 	
 	updateUI()
 
+func skipToLine(line):
+	currentLine = line
+	
+	if currentLine >= len(lines):
+		battleWon()
+		return
+	
+	updateUI()
+
 func updateUI():
 	updateDialog()
 	updatePatienceDecay()
 	updateActions()  
 	updateSprite()
 
+func determineIfClearLine():
+	return 'clear' in lines[currentLine] and lines[currentLine]['clear']
+
 func updateDialog():
 	if 'text' in lines[currentLine]:
 		$DialogBox/NinePatchRect/Dialog.text = lines[currentLine]['text']
+	elif determineIfClearLine():
+		$DialogBox/NinePatchRect/Dialog.text = ''
 	if 'name' in lines[currentLine]:
 		$DialogBox/NinePatchRect/Name.text = lines[currentLine]['name']
+	elif determineIfClearLine():
+		$DialogBox/NinePatchRect/Name.text = ''
 
 func updatePatienceDecay():
 	if 'patienceDecay' in lines[currentLine]:
@@ -51,12 +67,28 @@ func updateActions():
 				get_node(buttons[i]).text = actions[i]['actionText']
 			if 'addPatience' in actions[i]:
 				get_node(buttons[i]).addPatience = actions[i]['addPatience']
+			if 'skipToLine' in actions[i]:
+				get_node(buttons[i]).skipToLine = actions[i]['skipToLine']
+			else:
+				get_node(buttons[i]).skipToLine = -1
+	elif determineIfClearLine():
+		for button in buttons:
+			get_node(button).skipToLine = -1
+			get_node(button).addPatience = 0
+			get_node(button).text = ''
+	else:
+		for button in buttons:
+			get_node(button).skipToLine = -1
 
 func updateSprite(): 
 	if 'character' in lines[currentLine]:
 		character = lines[currentLine]['character']
+	elif determineIfClearLine():
+		character = ''
 	if 'enemySprite' in lines[currentLine]:
 		 $EnemySprite.texture = load(defaultFilePath + character + '/' + lines[currentLine]['enemySprite'])
+	elif determineIfClearLine():
+		$EnemySprite.texture = load('')
 
 func battleWon():
 	print("you won ig");
