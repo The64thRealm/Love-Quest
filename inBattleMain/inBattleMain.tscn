@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://inBattleMain/battleMainButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://inBattleMain/LQinBattleBg.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="LQinBattleBg" type="Sprite" parent="."]
+position = Vector2( 535.111, 303.5 )
+scale = Vector2( 0.562037, 0.562037 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rect white 1" type="ColorRect" parent="."]
+margin_left = -16.0
+margin_top = 464.0
+margin_right = 1032.0
+margin_bottom = 600.0
+
+[node name="rect red" type="ColorRect" parent="."]
+margin_left = 8.0
+margin_top = 472.0
+margin_right = 1016.0
+margin_bottom = 592.0
+color = Color( 0.682353, 0.180392, 0.180392, 1 )
+
+[node name="rect white 2" type="ColorRect" parent="."]
+margin_left = 16.0
+margin_top = 480.0
+margin_right = 128.0
+margin_bottom = 584.0
+
+[node name="item" parent="." instance=ExtResource( 1 )]
+margin_left = 728.0
+margin_top = 480.0
+margin_right = 984.0
+margin_bottom = 526.0
+rect_pivot_offset = Vector2( 112, 8 )
+text = "ITEM"
+
+[node name="ignore" parent="." instance=ExtResource( 1 )]
+margin_left = 728.0
+margin_top = 536.0
+margin_right = 984.0
+margin_bottom = 582.0
+rect_pivot_offset = Vector2( 112, 8 )
+text = "IGNORE"
+
+[node name="honesty" parent="." instance=ExtResource( 1 )]
+margin_left = 456.0
+margin_top = 536.0
+margin_right = 712.0
+margin_bottom = 582.0
+rect_pivot_offset = Vector2( 112, 8 )
+text = "HONESTY"
+
+[node name="gaslight" parent="." instance=ExtResource( 1 )]
+margin_left = 456.0
+margin_top = 480.0
+margin_right = 712.0
+margin_bottom = 526.0
+rect_pivot_offset = Vector2( 112, 8 )
+text = "GASLIGHT"
