@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://assets/city tilemap/tilemap_packed.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -336,19 +336,16 @@ points = PoolVector2Array( 2.71513, 0.0872192, 2.55361, 16, 0, 16, 0.131035, 0 )
 points = PoolVector2Array( 9.4874, 0, 9.97192, 2.10303, 15.6246, 2.26453, 16, 4.84862, 11.4255, 5.33314, 11.264, 9.53228, 9.97192, 10.3398, 9.97192, 15.508, 7.54934, 15.9925, 7.38783, 9.04776, 0.766106, 9.37077, 0.766106, 5.97916, 5.28826, 5.01012, 8.03385, 0.164955 )
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=18]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PoolVector2Array( 1.2855, 1.45511, 13.9592, 1.79156, 13.9592, 16, 1.62197, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=19]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PoolVector2Array( 1.00472, 1.35928, 14.2454, 1.8266, 14.2454, 16, 1.39416, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PoolVector2Array( 0.984402, 1.34294, 13.5459, 1.67941, 13.8824, 16, 1.54519, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+points = PoolVector2Array( 1.09397, 0.891968, 13.7733, 2.12805, 13.9976, 16, 1.88467, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 12.5383, 3.20512, 12.8174, 14.9265, 3.60767, 15.2056, 3.32858, 6.83318, 3.88675, 2.92604 )
@@ -702,12 +699,6 @@ points = PoolVector2Array( 0.946686, 11.4553, 15.1526, 11.3949, 16, 32, 0, 32 )
 "autotile_coord": Vector2( 1, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 18 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
-"autotile_coord": Vector2( 1, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
 "shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
@@ -889,7 +880,7 @@ points = PoolVector2Array( 0.946686, 11.4553, 15.1526, 11.3949, 16, 32, 0, 32 )
 10/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=68]
-points = PoolVector2Array( 7.17741, 16, 0, 16, 0.555695, 0.207703, 32, 0, 32, 15.7122, 25.1045, 16, 25.1045, 4.24533, 7.33893, 3.92233 )
+points = PoolVector2Array( 7.28043, 9.70984, 0, 9.70984, 0, 0, 32, 0, 32, 10.1944, 25.046, 10.0329, 24.8845, 2.76511, 7.76494, 3.08813 )
 
 [sub_resource type="ConvexPolygonShape2D" id=48]
 points = PoolVector2Array( 0.187759, 4.09479, 16, 4.25629, 16, 10.232, 0, 10.0705 )
