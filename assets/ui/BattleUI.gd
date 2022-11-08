@@ -50,7 +50,7 @@ func updateActions():
 			if 'actionText' in actions[i]:
 				get_node(buttons[i]).text = actions[i]['actionText']
 			if 'addPatience' in actions[i]:
-				get_node(buttons[i]).setAddPatience(actions[i]['addPatience'])
+				get_node(buttons[i]).addPatience = actions[i]['addPatience']
 
 func updateSprite(): 
 	if 'character' in lines[currentLine]:
