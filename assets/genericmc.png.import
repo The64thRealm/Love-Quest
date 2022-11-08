@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tileset_32x32_16.png-74609a7bca738261f2798c23b7d43625.stex"
+path="res://.import/genericmc.png-9f213fdb7d52fd90abc660c6bc232eea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Modern tiles_Free/Old/Tileset_32x32_16.png"
-dest_files=[ "res://.import/Tileset_32x32_16.png-74609a7bca738261f2798c23b7d43625.stex" ]
+source_file="res://assets/genericmc.png"
+dest_files=[ "res://.import/genericmc.png-9f213fdb7d52fd90abc660c6bc232eea.stex" ]
 
 [params]
 
