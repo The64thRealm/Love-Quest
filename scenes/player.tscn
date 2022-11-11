@@ -241,5 +241,5 @@ tree_root = SubResource( 16 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 17 )
-parameters/Idle/blend_position = Vector2( -0.00472438, 0.433962 )
+parameters/Idle/blend_position = Vector2( 0.00314963, 0.508621 )
 parameters/Walk/blend_position = Vector2( 0.00314963, 0.0880504 )
