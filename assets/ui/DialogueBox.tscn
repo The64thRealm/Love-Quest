@@ -11,7 +11,6 @@ font_data = ExtResource( 2 )
 [node name="DialogBox" type="Node2D"]
 scale = Vector2( 10, 10 )
 script = ExtResource( 1 )
-dialogFile = "res://assets/ui/testDialog.json"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 margin_right = 100.0

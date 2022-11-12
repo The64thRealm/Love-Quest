@@ -64,4 +64,4 @@ func _process(delta):
 	updateColor()
 	if checkPatience():
 		# print("dead")
-		emit_signal("outOfPatience")
+		get_node("..").battleLost()
