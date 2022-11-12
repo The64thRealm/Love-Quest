@@ -13,8 +13,6 @@ func _process(delta):
 
 func OnSubwayAreaEntered(body):
 	action_state = "Open"
-	print("inDoor")
 	
 func OnSubwayAreaExited(body):
 	action_state = "Off"
-	print("outDoor")
