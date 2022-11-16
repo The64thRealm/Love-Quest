@@ -11,10 +11,11 @@ font_data = ExtResource( 2 )
 [node name="DialogBox" type="Node2D"]
 scale = Vector2( 10, 10 )
 script = ExtResource( 1 )
+dialogFile = "res://assets/ui/dialogJsons/bossDialogInitial.json"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_right = 100.0
-margin_bottom = 100.0
+margin_right = 121.0
+margin_bottom = 104.0
 texture = ExtResource( 3 )
 patch_margin_left = 5
 patch_margin_top = 5
@@ -22,18 +23,21 @@ patch_margin_right = 5
 patch_margin_bottom = 5
 
 [node name="Name" type="Label" parent="NinePatchRect"]
-margin_left = 5.0
+anchor_right = 1.0
+margin_left = 10.0
 margin_top = 5.0
-margin_right = 95.0
+margin_right = -5.0
 margin_bottom = 17.0
 custom_fonts/font = SubResource( 1 )
 clip_text = true
 
 [node name="Dialog" type="Label" parent="NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 5.0
 margin_top = 17.0
-margin_right = 95.0
-margin_bottom = 95.0
+margin_right = -5.0
+margin_bottom = -5.0
 custom_constants/line_spacing = -1
 custom_fonts/font = SubResource( 1 )
 autowrap = true

@@ -4,32 +4,48 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+const formatStrings = {}
+
+static func addFormatStrings(key, replacement) :
+	formatStrings[key] = replacement
+
+static func fillVariableDialogText(rawDialog) :
+	for key in formatStrings :
+		rawDialog = rawDialog.replace(key, formatStrings[key])
+	return rawDialog
+
 # var filePath = ""
-export(String, FILE, "*.json") var dialogFile
+export(String, FILE, "*.json") var dialogFile = "res://assets/ui/testDialog.json"
 var lines = []
 var currentLine = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready(): 
-	currentLine = -1
-	play() 
-	nextLine()
+	addFormatStrings('<name>', 'Bob')
+	lines = loadDialog()
+	currentLine = 0
+	play()
+	loadLine()
 
 func play():
 	show()
 	$NinePatchRect/Dialog.margin_right = $NinePatchRect.margin_right - 5
 	$NinePatchRect/Name.margin_right = $NinePatchRect.margin_right - 5
 	$NinePatchRect/Name.margin_bottom = $NinePatchRect.margin_bottom - 5
-	lines = loadDialog()
 
 func nextLine():
 	currentLine += 1
 	
-	if currentLine >= len(lines):
+	if currentLine >= len(lines) :
 		hide()
 		return
-	$NinePatchRect/Name.text = lines[currentLine]['name']       
-	$NinePatchRect/Dialog.text = lines[currentLine]['text']
+	loadLine()
+
+func loadLine():
+	if 'name' in lines[currentLine] :
+		$NinePatchRect/Name.text = fillVariableDialogText(lines[currentLine]['name'])   
+	if 'text' in lines[currentLine] :
+		$NinePatchRect/Dialog.text = fillVariableDialogText(lines[currentLine]['text'])
 
 func hide():
 	$NinePatchRect.visible = false

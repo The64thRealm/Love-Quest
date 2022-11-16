@@ -1,6 +1,7 @@
 extends Node2D
+const DialogueBox = preload("DialogueBox.gd")
 
-var defaultFilePath = "res://assets/characters/"
+const defaultFilePath = "res://assets/characters/"
 
 export(String) var character
 export(String, FILE, "*.json") var battleFile = "res://assets/ui/testBattle.json"
@@ -47,11 +48,11 @@ func determineIfClearLine():
 
 func updateDialog():
 	if 'text' in lines[currentLine]:
-		$DialogBox/NinePatchRect/Dialog.text = lines[currentLine]['text']
+		$DialogBox/NinePatchRect/Dialog.text = DialogueBox.fillVariableDialogText(lines[currentLine]['text'])
 	elif determineIfClearLine():
 		$DialogBox/NinePatchRect/Dialog.text = ''
 	if 'name' in lines[currentLine]:
-		$DialogBox/NinePatchRect/Name.text = lines[currentLine]['name']
+		$DialogBox/NinePatchRect/Name.text = DialogueBox.fillVariableDialogText(lines[currentLine]['name'])
 	elif determineIfClearLine():
 		$DialogBox/NinePatchRect/Name.text = ''
 
@@ -64,7 +65,7 @@ func updateActions():
 		var actions = lines[currentLine]['actions']
 		for i in range(len(actions)):
 			if 'actionText' in actions[i]:
-				get_node(buttons[i]).text = actions[i]['actionText']
+				get_node(buttons[i]).text = DialogueBox.fillVariableDialogText(actions[i]['actionText'])
 			if 'addPatience' in actions[i]:
 				get_node(buttons[i]).addPatience = actions[i]['addPatience']
 			if 'skipToLine' in actions[i]:
