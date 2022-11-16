@@ -39,13 +39,8 @@ scale = Vector2( 5, 5 )
 script = null
 
 [node name="NinePatchRect" parent="DialogBox" index="0"]
-margin_right = 71.0
-
-[node name="Name" parent="DialogBox/NinePatchRect" index="0"]
-margin_right = 66.0
-
-[node name="Dialog" parent="DialogBox/NinePatchRect" index="1"]
-margin_right = 66.0
+margin_right = 70.0
+margin_bottom = 101.0
 
 [node name="PatienceBar" parent="." instance=ExtResource( 1 )]
 position = Vector2( 386, 12 )
