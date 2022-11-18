@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/citynight.png-6d6146bfd7015965f5d758793443b56e.stex"
+path="res://.import/citynight.png-2da61a4ba906ee31f7763800779a8443.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://citynight.png"
-dest_files=[ "res://.import/citynight.png-6d6146bfd7015965f5d758793443b56e.stex" ]
+source_file="res://MainMenu/citynight.png"
+dest_files=[ "res://.import/citynight.png-2da61a4ba906ee31f7763800779a8443.stex" ]
 
 [params]
 

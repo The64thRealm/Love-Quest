@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cover.png-e54a32e0ade1acf4b40cc874b4aec8e9.stex"
+path="res://.import/Cover.png-69c53b6fec67081b8edf4bbc4c1fe38b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PixelatedLove/PixelatedLove/Cover.png"
-dest_files=[ "res://.import/Cover.png-e54a32e0ade1acf4b40cc874b4aec8e9.stex" ]
+source_file="res://MainMenu/PixelatedLove/PixelatedLove/Cover.png"
+dest_files=[ "res://.import/Cover.png-69c53b6fec67081b8edf4bbc4c1fe38b.stex" ]
 
 [params]
 

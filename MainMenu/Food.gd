@@ -1,5 +1,7 @@
 extends LineEdit
 
+const DialogueBox = preload("res://assets/ui/DialogueBox.gd")
+
 var template: String = 'So your favorite food is \n'
 var t: String = '? Interesting...'
 onready var response_node: Label = self.get_parent().get_node("foodname")
@@ -12,6 +14,6 @@ func _ready():
 
 
 func _on_Food_text_entered(text1):
-	response_node.show()
+	response_node.show() 
 	response_node.text = template + text1 + t
-	GLOBAL.typefood = text1
+	DialogueBox.addFormatStrings("<food>", text1)
