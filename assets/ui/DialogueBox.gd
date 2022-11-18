@@ -20,8 +20,7 @@ var lines = []
 var currentLine = 0
 
 # Called when the node enters the scene tree for the first time.
-func _ready(): 
-#	addFormatStrings('<name>', 'Bob')
+func _ready():
 	lines = loadDialog()
 	currentLine = 0
 	play()
@@ -29,9 +28,6 @@ func _ready():
 
 func play():
 	show()
-	$NinePatchRect/Dialog.margin_right = $NinePatchRect.margin_right - 5
-	$NinePatchRect/Name.margin_right = $NinePatchRect.margin_right - 5
-	$NinePatchRect/Name.margin_bottom = $NinePatchRect.margin_bottom - 5
 
 func nextLine():
 	currentLine += 1

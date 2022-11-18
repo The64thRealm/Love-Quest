@@ -35,7 +35,6 @@ texture = ExtResource( 5 )
 
 [node name="DialogBox" parent="." instance=ExtResource( 3 )]
 position = Vector2( 14, 11 )
-scale = Vector2( 5, 5 )
 script = null
 
 [node name="NinePatchRect" parent="DialogBox" index="0"]

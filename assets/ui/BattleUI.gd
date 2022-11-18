@@ -40,7 +40,7 @@ func skipToLine(line):
 func updateUI():
 	updateDialog()
 	updatePatienceDecay()
-	updateActions()  
+	updateActions()
 	updateSprite()
 
 func determineIfClearLine():

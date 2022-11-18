@@ -9,13 +9,13 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [node name="DialogBox" type="Node2D"]
-scale = Vector2( 10, 10 )
+scale = Vector2( 5, 5 )
 script = ExtResource( 1 )
-dialogFile = "res://assets/ui/dialogJsons/bossDialogInitial.json"
+dialogFile = "res://assets/ui/dialogJsons/HarperDialog1.json"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_right = 121.0
-margin_bottom = 104.0
+margin_right = 204.0
+margin_bottom = 119.0
 texture = ExtResource( 3 )
 patch_margin_left = 5
 patch_margin_top = 5
