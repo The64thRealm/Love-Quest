@@ -1,0 +1,13 @@
+[
+    {
+        "character": "Harper",
+        "patienceDecay": 5,
+        "name": "Harper",
+        "text": "I just wanted you to come home early for once.",
+        "actions": [{"actionText": "It’s not a big deal", "addPatience": -10}, {"actionText": "I can try harder next time.", "addPatience": 10}]
+    },
+    {
+        "text": "Why won’t you listen to how I’m feeling?",
+        "actions": [{"actionText": "It’s not a big deal", "addPatience": -10}, {"actionText": "I can try harder next time.", "addPatience": 10}]
+    }
+] 
