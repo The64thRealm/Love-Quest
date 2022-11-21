@@ -23,7 +23,7 @@
         "text": "more text",
         "actions": [{"actionText": "action5", "addPatience": -10}, {"actionText": "idk", "addPatience": 10}]
     },
-    {
+    {   
         "patienceDecay": 1,
         "sprite": "TempSprite1.png",
         "name": "stuff",

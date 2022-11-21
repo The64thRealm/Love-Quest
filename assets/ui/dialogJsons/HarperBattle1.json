@@ -1,13 +1,30 @@
 [
     {
         "character": "Harper",
-        "patienceDecay": 5,
+        "patienceDecay": 10,
         "name": "Harper",
         "text": "I just wanted you to come home early for once.",
         "actions": [{"actionText": "It’s not a big deal", "addPatience": -10}, {"actionText": "I can try harder next time.", "addPatience": 10}]
     },
     {
         "text": "Why won’t you listen to how I’m feeling?",
-        "actions": [{"actionText": "It’s not a big deal", "addPatience": -10}, {"actionText": "I can try harder next time.", "addPatience": 10}]
+        "actions": [{"actionText": "I want to, but I can’t always make you happy.", "addPatience": 10}, {"actionText": "You are getting way too worked up.", "addPatience": -10}]
+    },
+    {
+        "text": "It seems like you care more about your job than me.",
+        "actions": [{"actionText": "I’m losing sleep over this argument.", "addPatience": -10}, {"actionText": "I do a lot for you too, you know.", "addPatience": -10}]
+    },
+    {
+        "text": "Just tell me the truth and I promise I won’t get mad, okay?",
+        "actions": [{"actionText": "I really do care about you.", "addPatience": 10}, {"actionText": "You make me feel like I’m always doing something wrong.", "addPatience": -10}],
+        "patienceDecay": 10
+    },
+    {
+        "text": "Do you even still like me?",
+        "actions": [{"actionText": "I’ll do better to be here for you.", "addPatience": 10}, {"actionText": "You act as if I abandoned you for someone else.", "addPatience": -10}]
+    },
+    {
+        "text": "We were supposed to have our couple’s night tonight.",
+        "actions": [{"actionText": "You never told me that.", "addPatience": -10}, {"actionText": "I’ll do better to be here for you.", "addPatience": 10}]
     }
-] 
+]
