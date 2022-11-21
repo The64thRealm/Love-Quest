@@ -2,7 +2,7 @@
     {
         "character": "TempChar",
         "patienceDecay": 5,
-        "enemySprite": "TempSprite1.png",
+        "sprite": "TempSprite1.png",
         "name": "this is a character name and it should get cut off when it can't fit anymore",
         "text": "hi I am typing a paragraph to see how this looks",
         "actions": [{"actionText": "action1", "addPatience": -10}, {"actionText": "action2", "addPatience": 10}]
@@ -13,19 +13,19 @@
     },
     {
         "patienceDecay": 20,
-        "enemySprite": "TempSprite2.png",
+        "sprite": "TempSprite2.png",
         "name": "ugh"
     },
     {
         "patienceDecay": 5,
-        "enemySprite": "TempSprite3.png",
+        "sprite": "TempSprite3.png",
         "name": "name2",
         "text": "more text",
         "actions": [{"actionText": "action5", "addPatience": -10}, {"actionText": "idk", "addPatience": 10}]
     },
     {
         "patienceDecay": 1,
-        "enemySprite": "TempSprite1.png",
+        "sprite": "TempSprite1.png",
         "name": "stuff",
         "text": ""
     },

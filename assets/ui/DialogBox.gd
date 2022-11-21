@@ -20,7 +20,7 @@ export(String, FILE, "*.json") var dialogFile = "res://assets/ui/testBattle.json
 var lines = []
 # list lines, will be populated after parsing the json
 var currentLine = 0
-var buttons = ["NinePatchRect/Choice1", "NinePatchRect/Choice2"]
+export(Array, String) var buttons : Array = ["NinePatchRect/Choice1", "NinePatchRect/Choice2"]
 # names of the button objects that will be used
 var forceChoice = false
 # variable that tells the game whether or not to force the player to press
@@ -28,7 +28,7 @@ var forceChoice = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	addFormatStrings("<name>", "Bob")
+#	addFormatStrings("<name>", "Bob")
 	play()
 	currentLine = -1
 	advanceLine()
@@ -83,18 +83,14 @@ func updateActions():
 			get_node(buttons[i]).show()
 			if 'actionText' in actions[i]:
 				get_node(buttons[i]).text = fillVariableDialogText(actions[i]['actionText'])
-#			if 'addPatience' in actions[i]:
-#				get_node(buttons[i]).addPatience = actions[i]['addPatience']
 			if 'skipToLine' in actions[i]:
 				get_node(buttons[i]).skipToLine = actions[i]['skipToLine']
-				actions[i]['skipToLine']
 			else:
 				get_node(buttons[i]).skipToLine = -1
 	elif determineIfClearLine():
 		for button in buttons:
 			var buttonNode = get_node(button)
 			buttonNode.skipToLine = -1
-			buttonNode.addPatience = 0
 			buttonNode.text = ''
 	else:
 		forceChoice = false

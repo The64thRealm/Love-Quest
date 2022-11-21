@@ -4,7 +4,7 @@ export(Gradient) var barGradient
 
 export(float) var decayPerSecond
 
-signal outOfPatience
+#signal outOfPatience
 
 const patienceTweening = 0.1
 

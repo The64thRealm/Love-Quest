@@ -64,3 +64,5 @@ margin_bottom = -5.0
 rect_pivot_offset = Vector2( -133, -72 )
 
 [node name="sprite" type="Sprite" parent="."]
+position = Vector2( 264.4, 108.8 )
+scale = Vector2( 5, 5 )

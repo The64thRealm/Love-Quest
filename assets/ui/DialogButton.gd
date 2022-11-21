@@ -2,10 +2,11 @@ extends Button
 export var reference_path = ""
 export(bool) var start_focused = false
 
-var addPatience = 0;
-var skipToLine = -1;
+var skipToLine = -1
+var dialogBoxPath = "../.."
 
 func _ready():
+	dialogBoxPath
 	if(start_focused):
 		grab_focus()
 	connect("mouse_entered",self,"_on_Button_mouse_entered")
@@ -17,10 +18,8 @@ func _on_Button_mouse_entered():
 func _on_Button_Pressed():
 	if reference_path != "":
 		get_tree().change_scene(reference_path)
-
-#	get_node("../PatienceBar").addPatience(addPatience)
 	if skipToLine < 0:
-		get_node("../..").advanceLine()
+		get_node(dialogBoxPath).advanceLine()
 	else:
-		get_node("../..").skipToLine(skipToLine)
+		get_node(dialogBoxPath).skipToLine(skipToLine)
 #		skipToLine = -1
