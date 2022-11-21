@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/textboxFrame.png-b1d158a212bdfed120d8095d0dfd1e37.stex"
+path="res://.import/LQcolorPallete_5 (3) (1).png-5d5c23107ebdc4e62babb04df1ee9fa9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/textboxFrame.png"
-dest_files=[ "res://.import/textboxFrame.png-b1d158a212bdfed120d8095d0dfd1e37.stex" ]
+source_file="res://assets/ui/LQcolorPallete_5 (3) (1).png"
+dest_files=[ "res://.import/LQcolorPallete_5 (3) (1).png-5d5c23107ebdc4e62babb04df1ee9fa9.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

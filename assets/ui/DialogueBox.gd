@@ -8,6 +8,9 @@ extends Node2D
 export(String, FILE, "*.json") var dialogFile
 var lines = []
 var currentLine = 0
+var typing_speed = 0.1
+var read_time = 2
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready(): 
