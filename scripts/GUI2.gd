@@ -8,11 +8,11 @@ func _process(delta):
 			"Off":
 				pass
 			"Open":
-				get_tree().change_scene("res://scenes/city.tscn")
+				get_tree().change_scene("res://scenes/apartment.tscn")
 				pass
 
-func OnDoorAreaEntered(body):
+func OnApartAreaEntered(body):
 	action_state = "Open"
 	
-func OnDoorAreaExited(body):
+func OnApartAreaExited(body):
 	action_state = "Off"
