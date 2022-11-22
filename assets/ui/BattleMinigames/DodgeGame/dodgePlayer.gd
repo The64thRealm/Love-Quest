@@ -26,6 +26,9 @@ func read_input():
 		$AnimationTree.set("parameters/Idle/blend_position", velocity)
 		$AnimationTree.set("parameters/Walk/blend_position", velocity)
 		move_and_slide(velocity)
-		
+
 func _physics_process(delta):
 	read_input()
+
+func flashRed():
+	$HitEffect.play(" hitBlink")
