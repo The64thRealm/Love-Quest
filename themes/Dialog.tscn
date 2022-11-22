@@ -9,16 +9,6 @@ margin_left = 101.0
 margin_top = 177.0
 margin_right = 296.0
 margin_bottom = 450.0
-text = "This is the text
-.
-.
-..
-.
-..
-.
-d
-ds
-fdd"
 
 [node name="Timer2" type="Timer" parent="."]
 

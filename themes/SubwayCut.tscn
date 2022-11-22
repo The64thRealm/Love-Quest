@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/subwayCutScene.mp3" type="AudioStream" id=1]
+[ext_resource path="res://assets/subwayride2-53490.mp3" type="AudioStream" id=1]
 [ext_resource path="res://themes/SubwayCut.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
@@ -13,5 +13,12 @@ margin_right = 1041.0
 margin_bottom = 602.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Timer" type="Timer" parent="."]
+wait_time = 11.29
+autostart = true
+
+[node name="subway" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 512, 280 )
 stream = ExtResource( 1 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
