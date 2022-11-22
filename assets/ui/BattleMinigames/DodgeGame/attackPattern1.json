@@ -1,0 +1,7 @@
+[
+    {"projs": [{"angle0": 0, "dir": 20}, {"angle0": 90}], "wait": 2},
+    {"projs": [{"angle0": 2, "dir": 20}, {"angle0": 92}], "wait": 2},
+    {"projs": [{"angle0": 4, "dir": 20}, {"angle0": 94}], "wait": 2},
+    {"projs": [{"angle0": 6, "dir": 20}, {"angle0": 96}], "wait": 2},
+    {"projs": [{"angle0": 8, "dir": 20}, {"angle0": 98}], "wait": 2}
+]

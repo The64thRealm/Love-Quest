@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/ui/BattleMinigames/DodgeGame/featherProjectile.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11, 4 )
+
+[node name="projectile" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.41, 0 )
+rotation = 0.785398
+scale = Vector2( 1, 1 )
+texture = ExtResource( 1 )
