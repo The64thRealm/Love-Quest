@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/ui/patienceBarFrame.png" type="Texture" id=4]
 [ext_resource path="res://themes/ProgressBar.tres" type="Theme" id=5]
 [ext_resource path="res://assets/ui/BattleUI.gd" type="Script" id=6]
-[ext_resource path="res://themes/Dialog.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/ui/DialogueBox.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0.819608, 0.290196, 1 )
@@ -21,8 +21,6 @@ theme = ExtResource( 5 )
 script = ExtResource( 6 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Node2D" parent="CanvasLayer" instance=ExtResource( 7 )]
 
 [node name="PatienceBar" type="ProgressBar" parent="CanvasLayer"]
 anchor_left = 0.5
@@ -86,3 +84,6 @@ texture_hover = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="DialogBox" parent="CanvasLayer" instance=ExtResource( 7 )]
+position = Vector2( 7.62939e-06, -15 )
