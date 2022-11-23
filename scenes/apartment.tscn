@@ -28,19 +28,19 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 points = PoolVector2Array( 0, 0, 16, 0, 16, 6.68628, 0, 6.68628 )
 
 [sub_resource type="ConvexPolygonShape2D" id=35]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 6.1264, 0, 6.31305 )
+points = PoolVector2Array( 0, 0, 16, 0, 16, 6.72562, 0, 6.72562 )
 
 [sub_resource type="ConvexPolygonShape2D" id=36]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 6.31305, 0, 6.49966 )
+points = PoolVector2Array( 0, 0, 16, 0, 16, 6.591, 0, 6.591 )
 
 [sub_resource type="ConvexPolygonShape2D" id=37]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 6.87292, 0, 6.31305 )
+points = PoolVector2Array( 0, 0, 16, 0, 16, 6.87292, 0, 6.92737 )
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 6.68628, 0, 6.87292 )
+points = PoolVector2Array( 0, 0, 16, 0, 16, 6.92737, 0, 6.87292 )
 
 [sub_resource type="ConvexPolygonShape2D" id=39]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 6.68628, 0, 6.31305 )
+points = PoolVector2Array( 0, 0, 16, 0, 16, 6.92737, 0, 6.92737 )
 
 [sub_resource type="ConvexPolygonShape2D" id=26]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -415,19 +415,19 @@ points = PoolVector2Array( 3.9968, 12.1271, 12.7681, 12.6869, 14.821, 20.7118, 0
 points = PoolVector2Array( 3.90952, 11.9404, 12.4942, 11.5671, 14.5471, 19.0321, 1.29677, 19.2188 )
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
-points = PoolVector2Array( 0, 21.2693, 9.13617, 21.2693, 15.4067, 21.2693, 13.8391, 26.1962, 1.74586, 27.0919 )
+points = PoolVector2Array( 0, 21.011, 9.01243, 21.0759, 16, 21.1409, 13.8391, 26.1962, 1.74586, 27.0919 )
 
 [sub_resource type="ConvexPolygonShape2D" id=12]
-points = PoolVector2Array( 16, 4.96237, 16, 15.3585, 13.328, 16, 13.8879, 5.33562 )
+points = PoolVector2Array( 16, 5.37448, 16, 15.3585, 13.328, 16, 13.6256, 5.43939 )
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
-points = PoolVector2Array( 16, 15.7318, 0, 16, 0, 5.36098, 16, 5.51649 )
+points = PoolVector2Array( 16, 15.7318, 0, 16, 0, 5.36098, 16, 5.24467 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
-points = PoolVector2Array( 0, 5.67201, 16, 5.82755, 16, 16, 0, 16 )
+points = PoolVector2Array( 0, 5.17976, 16, 5.24467, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
-points = PoolVector2Array( 0, 16, 0, 5.52225, 3.02605, 5.52225, 3.02605, 16 )
+points = PoolVector2Array( 0, 16, 0, 5.24467, 2.94621, 5.17976, 3.02605, 16 )
 
 [sub_resource type="TileSet" id=3]
 2/name = "lamp.png 2"
@@ -766,6 +766,16 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -327685, 3, 65542, -327684, 2, 0, -327683, 2, 1, -327682, 2, 1, -327681, 2, 1, -393216, 2, 1, -393215, 2, 1, -393214, 2, 1, -393213, 2, 2, -393212, 3, 65544, -262149, 3, 131078, -262148, 2, 65543, -262147, 2, 65537, -262146, 2, 65537, -262145, 2, 65537, -327680, 2, 65537, -327679, 2, 65537, -327678, 2, 65537, -327677, 2, 65545, -327676, 3, 131080, -196613, 3, 131078, -196612, 1, 0, -196611, 1, 1, -196610, 1, 1, -196609, 1, 1, -262144, 1, 1, -262143, 1, 1, -262142, 1, 1, -262141, 1, 1, -262140, 3, 131080, -131077, 3, 131078, -131076, 1, 65536, -131075, 1, 65537, -131074, 1, 65537, -131073, 1, 65537, -196608, 1, 65537, -196607, 1, 65537, -196606, 1, 65537, -196605, 1, 65537, -196604, 3, 131080, -65541, 3, 131078, -65540, 1, 65536, -65539, 1, 65537, -65538, 1, 65537, -65537, 1, 65537, -131072, 1, 65537, -131071, 1, 65537, -131070, 1, 65537, -131069, 1, 65537, -131068, 3, 131080, -5, 3, 131078, -4, 1, 65536, -3, 1, 65537, -2, 1, 65537, -1, 1, 65537, -65536, 1, 65537, -65535, 1, 65537, -65534, 1, 65537, -65533, 1, 65537, -65532, 3, 131080, 65531, 3, 131078, 65532, 1, 65536, 65533, 1, 65537, 65534, 1, 65537, 65535, 1, 65537, 0, 1, 65537, 1, 1, 65537, 2, 1, 65537, 3, 1, 65537, 4, 3, 131080, 131067, 3, 131078, 131068, 1, 65536, 131069, 1, 65537, 131070, 1, 65537, 131071, 1, 65537, 65536, 1, 65537, 65537, 1, 65537, 65538, 1, 65537, 65539, 1, 65537, 65540, 3, 131080, 196603, 3, 131078, 196604, 1, 65536, 196605, 1, 65537, 196606, 1, 65537, 196607, 1, 65537, 131072, 1, 65537, 131073, 1, 65537, 131074, 1, 65537, 131075, 1, 65537, 131076, 3, 131080, 262139, 3, 196614, 262140, 3, 196615, 262141, 3, 196615, 262142, 3, 196615, 262143, 3, 196615, 196608, 3, 196615, 196609, 3, 196615, 196610, 3, 196615, 196611, 3, 196615, 196612, 3, 196616 )
 
+[node name="Camera2D" type="Camera2D" parent="base"]
+position = Vector2( -1, -22 )
+current = true
+zoom = Vector2( 0.25, 0.25 )
+limit_left = -1000000
+limit_top = -1000000
+limit_right = 100000
+limit_bottom = 100000
+editor_draw_limits = true
+
 [node name="stuff" type="TileMap" parent="base"]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
@@ -778,12 +788,8 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -262148, 4, 0, -327677, 4, 2, -131074, 7, 0, -131073, 7, 1, -196608, 7, 1, -196607, 7, 3, -65538, 7, 131072, -65537, 7, 131073, -131072, 7, 131074, -131071, 7, 131075, -1, 3, 65536, -65536, 3, 65538, 65538, 536870914, 0, 65539, 6, 0 )
 
-[node name="player" parent="base/stuff/addons" instance=ExtResource( 1 )]
-position = Vector2( -39, 40 )
-
-[node name="Camera2D" type="Camera2D" parent="base/stuff/addons/player"]
-current = true
-zoom = Vector2( 0.23, 0.23 )
+[node name="player2" parent="base/stuff/addons" instance=ExtResource( 1 )]
+position = Vector2( -39, 41 )
 
 [node name="behind" type="TileMap" parent="base/stuff/addons"]
 tile_set = SubResource( 4 )

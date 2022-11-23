@@ -1039,7 +1039,12 @@ position = Vector2( -64, 60 )
 
 [node name="Camera2D" type="Camera2D" parent="base/buildings and stuff/player"]
 current = true
-zoom = Vector2( 0.23, 0.23 )
+zoom = Vector2( 0.139, 0.139 )
+limit_left = -112
+limit_top = -96
+limit_right = 126
+limit_bottom = 192
+editor_draw_limits = true
 
 [node name="addons" type="TileMap" parent="base/buildings and stuff"]
 tile_set = SubResource( 3 )
