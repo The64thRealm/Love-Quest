@@ -105,7 +105,7 @@ func updateSprite():
 	elif determineIfClearLine():
 		character = ''
 	if 'sprite' in lines[currentLine]:
-		$sprite.texture = load(defaultFilePath + character + '/' + lines[currentLine]['sprite'])
+		$sprite.texture = load(defaultFilePath + character + '/' + lines[currentLine]['sprite'] + ".png")
 	elif determineIfClearLine():
 		$sprite.texture = null
 

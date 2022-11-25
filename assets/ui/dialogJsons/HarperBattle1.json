@@ -21,6 +21,7 @@
     },
     {
         "text": "Do you even still like me?",
+        "sprite": "confused",
         "actions": [{"actionText": "I’ll do better to be here for you.", "addPatience": 10}, {"actionText": "You act as if I abandoned you for someone else.", "addPatience": -10}]
     },
     {
