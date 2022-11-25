@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/patienceBarFrame.png-b3f4dd6b7887857d6e50e380f8bcadd8.stex"
+path="res://.import/LQcolorPallete_5 (4).png-8d909d1452840b863695beb50a5e657d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/patienceBarFrame.png"
-dest_files=[ "res://.import/patienceBarFrame.png-b3f4dd6b7887857d6e50e380f8bcadd8.stex" ]
+source_file="res://assets/ui/LQcolorPallete_5 (4).png"
+dest_files=[ "res://.import/LQcolorPallete_5 (4).png-8d909d1452840b863695beb50a5e657d.stex" ]
 
 [params]
 

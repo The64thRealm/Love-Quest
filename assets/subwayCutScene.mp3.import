@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/subwayCutScene.mp3-1646a7df17f538605e946bbdf6e10228.mp3str"
+
+[deps]
+
+source_file="res://assets/subwayCutScene.mp3"
+dest_files=[ "res://.import/subwayCutScene.mp3-1646a7df17f538605e946bbdf6e10228.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
