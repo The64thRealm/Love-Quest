@@ -13,7 +13,7 @@ func endOfDialogReached():
 
 func updatePatienceDecay():
 	if 'patienceDecay' in lines[currentLine]:
-		$PatienceBar.setDecay(lines[currentLine]['patienceDecay'])
+		get_node("../PatienceBar").setDecay(lines[currentLine]['patienceDecay'])
 
 func updateActionPatience():
 	if 'clear' in lines:

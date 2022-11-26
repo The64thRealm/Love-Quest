@@ -11,34 +11,39 @@ static func fillVariableDialogText(rawDialog) :
 		# replaces keywords like <name> with the actual player name
 	return rawDialog
 
-const defaultFilePath = "res://assets/characters/"
-
-export(String) var character
-# the name of the folder where the character sprites will be accessed from
 export(String, FILE, "*.json") var dialogFile = "res://assets/ui/testBattle.json"
 # the file where the dialog will be read from
 var lines = []
 # list lines, will be populated after parsing the json
 var currentLine = 0
-export(Array, String) var buttons : Array = ["NinePatchRect/Choice1", "NinePatchRect/Choice2"]
+var typing_speed = 0.1
+var read_time = 2
+var current_message = 0
+var display = ""
+var current_char = 0
+
+export(String) var character
+# the name of the folder where the character sprites will be accessed from
+export(Array, String) var buttons : Array = ["NinePatchRect/TextureButton1", "NinePatchRect/TextureButton2"]
 # names of the button objects that will be used
 var forceChoice = false
 # variable that tells the game whether or not to force the player to press
-# the buttons or use advance text using the interact button
+
+const defaultFilePath = "res://assets/characters/"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#	addFormatStrings("<name>", "Bob")
 	play()
 	currentLine = -1
-	advanceLine()
+	nextLine()
 
 func play():
 	show()
 	lines = loadDialog()
 
-func advanceLine():
+func nextLine():
 	currentLine += 1
+	
 	if !checkOutOfBounds() :
 		if 'skipToLine' in lines[currentLine - 1]:
 			skipToLine(lines[currentLine - 1]['skipToLine'])
@@ -82,7 +87,7 @@ func updateActions():
 		for i in range(len(actions)):
 			get_node(buttons[i]).show()
 			if 'actionText' in actions[i]:
-				get_node(buttons[i]).text = fillVariableDialogText(actions[i]['actionText'])
+				get_node(buttons[i]).setText(fillVariableDialogText(actions[i]['actionText']))
 			if 'skipToLine' in actions[i]:
 				get_node(buttons[i]).skipToLine = actions[i]['skipToLine']
 			else:
@@ -91,12 +96,12 @@ func updateActions():
 		for button in buttons:
 			var buttonNode = get_node(button)
 			buttonNode.skipToLine = -1
-			buttonNode.text = ''
+			buttonNode.setText("")
 	else:
 		forceChoice = false
 		for button in buttons:
 			get_node(button).skipToLine = -1
-			get_node(button).text = ""
+			get_node(button).setText("")
 			get_node(button).hide()
 
 func updateSprite(): 
@@ -109,17 +114,20 @@ func updateSprite():
 	elif determineIfClearLine():
 		$sprite.texture = null
 
-func show():
-	self.visible = true
-
 func hide():
-	self.visible = false
+	$NinePatchRect.visible = false
+
+func show():
+	$NinePatchRect.visible = true
 
 func _input(event):
-	if event.is_action_pressed("interact") and !forceChoice:
-		advanceLine()
+	if event.is_action_pressed("interact"):
+		nextLine()
 
 func loadDialog():
+	current_message = 0
+	display = ""
+	current_char = 0
 	var file = File.new()
 	if file.file_exists(dialogFile):
 		file.open(dialogFile, file.READ)

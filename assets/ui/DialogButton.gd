@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 export var reference_path = ""
 export(bool) var start_focused = false
 
@@ -19,7 +19,14 @@ func _on_Button_Pressed():
 	if reference_path != "":
 		get_tree().change_scene(reference_path)
 	if skipToLine < 0:
-		get_node(dialogBoxPath).advanceLine()
+		get_node(dialogBoxPath).nextLine()
 	else:
 		get_node(dialogBoxPath).skipToLine(skipToLine)
 #		skipToLine = -1
+
+func setText(text):
+	if text == "" :
+		hide()
+	else :
+		$Label.text = text
+		show()

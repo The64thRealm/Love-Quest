@@ -4,7 +4,7 @@ var addPatience = 0;
 
 func _ready():
 	._ready()
-	dialogBoxPath = ".."	
+	dialogBoxPath = "../DialogBox"
 
 func _on_Button_Pressed():
 	._on_Button_Pressed()
