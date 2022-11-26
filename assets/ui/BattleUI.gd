@@ -1,5 +1,11 @@
 extends "res://assets/ui/DialogBox.gd"
 
+#func _ready():
+#	buttons = ["../TextureButton1", "../TextureButton1"]
+#	play()
+#	currentLine = -1
+#	nextLine()
+
 func battleWon():
 	print("you won ig");
 	hide()

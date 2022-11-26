@@ -1,28 +1,23 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/ui/LQcolorPallete_5 (4).png" type="Texture" id=1]
 [ext_resource path="res://assets/ui/canGodotStopYellingAtMe.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/button_pressed.png" type="Texture" id=3]
-[ext_resource path="res://assets/ui/patienceBarFrame.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/PatienceBar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://themes/ProgressBar.tres" type="Theme" id=5]
 [ext_resource path="res://assets/ui/LQcolorPallete_5 (3) (1).png" type="Texture" id=6]
 [ext_resource path="res://assets/ui/BattleButton.gd" type="Script" id=7]
-[ext_resource path="res://assets/kenney_fontpackage/Fonts/Kenney Pixel.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://assets/ui/BattleUI.gd" type="Script" id=9]
 [ext_resource path="res://MainMenu/PixelatedLove/PixelatedLove/pixelated-loveNew.ttf" type="DynamicFontData" id=10]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0.819608, 0.290196, 1 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
 [sub_resource type="DynamicFont" id=4]
+size = 36
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 8 )
+extra_spacing_bottom = -10
+font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 12
+size = 24
 font_data = ExtResource( 10 )
 
 [node name="BattleUI" type="Control"]
@@ -35,21 +30,6 @@ __meta__ = {
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PatienceBar" type="ProgressBar" parent="CanvasLayer"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -80.0
-margin_top = 39.0
-margin_right = 459.0
-margin_bottom = 73.0
-theme = ExtResource( 5 )
-custom_styles/fg = SubResource( 1 )
-custom_styles/bg = SubResource( 2 )
-value = 100.0
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="Border" type="Sprite" parent="CanvasLayer"]
 position = Vector2( 512, 300 )
 texture = ExtResource( 1 )
@@ -57,21 +37,15 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="PatienceBarFrame" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 702, 57 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="DialogBox" type="Node2D" parent="CanvasLayer"]
-scale = Vector2( 10, 10 )
 script = ExtResource( 9 )
 buttons = [ "../TextureButton1", "../TextureButton2" ]
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/DialogBox"]
-margin_right = 103.0
-margin_bottom = 60.0
+margin_left = 35.0
+margin_top = 40.0
+margin_right = 384.0
+margin_bottom = 571.0
 texture = ExtResource( 2 )
 patch_margin_left = 5
 patch_margin_top = 5
@@ -82,12 +56,12 @@ __meta__ = {
 }
 
 [node name="Name" type="Label" parent="CanvasLayer/DialogBox/NinePatchRect"]
-anchor_right = 2.0
-margin_left = 10.0
-margin_top = 5.0
-margin_right = -15.0
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 10.0
+margin_right = -10.0
 margin_bottom = 15.0
-rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.34902, 0.0313726, 0.0313726, 1 )
 custom_fonts/font = SubResource( 4 )
 clip_text = true
 __meta__ = {
@@ -95,12 +69,11 @@ __meta__ = {
 }
 
 [node name="Dialog" type="Label" parent="CanvasLayer/DialogBox/NinePatchRect"]
-anchor_right = 2.0
-anchor_bottom = 2.0
-margin_left = 5.0
-margin_top = 10.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 50.0
 margin_right = -10.0
-rect_scale = Vector2( 0.5, 0.5 )
 custom_colors/font_color = Color( 0.34902, 0.0313726, 0.0313726, 1 )
 custom_constants/line_spacing = -1
 custom_fonts/font = SubResource( 4 )
@@ -121,15 +94,13 @@ __meta__ = {
 }
 
 [node name="TextureButton1" type="TextureButton" parent="CanvasLayer"]
-anchor_left = 0.25
+anchor_left = 0.578
 anchor_top = 1.0
-anchor_right = 0.25
+anchor_right = 0.578
 anchor_bottom = 1.0
-margin_left = 232.0
-margin_top = -70.0
-margin_right = 432.0
-margin_bottom = 2.0
-rect_scale = Vector2( 0.25, 0.25 )
+margin_left = -140.0
+margin_top = -100.0
+margin_bottom = -1000.0
 button_mask = 3
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 3 )
@@ -152,15 +123,14 @@ __meta__ = {
 }
 
 [node name="TextureButton2" type="TextureButton" parent="CanvasLayer"]
-anchor_left = 0.75
+anchor_left = 0.792
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -245.5
-margin_top = -180.0
-margin_right = -221.5
-margin_bottom = -108.0
-rect_scale = Vector2( 0.25, 0.25 )
+margin_left = -60.0
+margin_top = -100.0
+margin_right = -199.0
+margin_bottom = -1000.0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 3 )
@@ -180,3 +150,11 @@ clip_text = true
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="PatienceBar" parent="CanvasLayer" instance=ExtResource( 4 )]
+anchor_left = 0.37
+anchor_right = 1.0
+margin_left = 40.12
+margin_top = 30.0
+margin_right = -32.0
+margin_bottom = 75.0

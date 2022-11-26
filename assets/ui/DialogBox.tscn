@@ -132,8 +132,5 @@ __meta__ = {
 }
 
 [node name="sprite" type="Sprite" parent="."]
-position = Vector2( 264.4, 108.8 )
+position = Vector2( 70.9, 31.2 )
 scale = Vector2( 5, 5 )
-__meta__ = {
-"_edit_lock_": true
-}
