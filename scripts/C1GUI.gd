@@ -8,7 +8,8 @@ func _process(delta):
 			"Off":
 				pass
 			"Open":
-				get_tree().change_scene("res://scenes/city 2.tscn")
+				SFX.play_train()
+				SubwayTransition.change_scene("res://scenes/city 2.tscn")
 				pass
 
 func OnSubwayAreaEntered(body):

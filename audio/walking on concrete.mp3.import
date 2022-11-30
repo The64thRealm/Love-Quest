@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/walking on concrete.mp3-66504036e0b9a9c1000569d42a28277d.mp3str"
+
+[deps]
+
+source_file="res://audio/walking on concrete.mp3"
+dest_files=[ "res://.import/walking on concrete.mp3-66504036e0b9a9c1000569d42a28277d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

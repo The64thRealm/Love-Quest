@@ -8,6 +8,8 @@ func _process(delta):
 			"Off":
 				pass
 			"Open":
+				SFX.play_sound()
+				yield(get_tree().create_timer(0.9), "timeout")
 				get_tree().change_scene("res://scenes/apartment.tscn")
 				pass
 

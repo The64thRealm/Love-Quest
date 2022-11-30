@@ -156,6 +156,11 @@ config/name="Love Quest"
 run/main_scene="res://scenes/office.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SFX="*res://autoloads/SFX.tscn"
+SubwayTransition="*res://autoloads/subwayTransition.tscn"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/event_system_plugin/plugin.cfg" )
