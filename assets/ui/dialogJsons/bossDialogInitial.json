@@ -1,0 +1,14 @@
+[
+    {"name": "Boss", "text": "Get up, <name>. You’re not paid to sleep, you’re paid to get work done."},
+    {"name": "<name>", "text": "Huh? When did I-"},
+    {"name": "Boss", "text": "This is the third time this week. My patience is running thin, <name>"},
+    {"name": "<name>", "text": "Sorry sir, it’s just that you’ve extended my hours every day-"},
+    {"name": "Boss", "text": "This is what you get for wasting your time."},
+    {"text": "I’ve generously given you eight hours to complete your tasks."},
+    {"text": "Even I could’ve done this in half the time! Now get back to work. Don’t leave until you get this done."},
+    {"name": "", "text": ""},
+    {"name": "Boss", "text": "Do not disappoint me again, <name>."},
+    {"name": "<name>", "text": "Whew. I’m finally done."},
+    {"text": "Harper will be worried sick, I better hurry home so she doesn’t worry too much."},
+    {"text": "I’ll need to take the subway at night… Hopefully it’s not too dangerous."}
+]

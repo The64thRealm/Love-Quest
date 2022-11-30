@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/textboxFrame.png-b1d158a212bdfed120d8095d0dfd1e37.stex"
+path="res://.import/tempSprite1.png-e2b44d8521ba8ddf362e49098cd90e03.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/textboxFrame.png"
-dest_files=[ "res://.import/textboxFrame.png-b1d158a212bdfed120d8095d0dfd1e37.stex" ]
+source_file="res://assets/characters/TempChar/tempSprite1.png"
+dest_files=[ "res://.import/tempSprite1.png-e2b44d8521ba8ddf362e49098cd90e03.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

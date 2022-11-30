@@ -153,13 +153,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Love Quest"
-run/main_scene="res://scenes/office.tscn"
+run/main_scene="res://titleScreen/titleScreen.tscn"
 config/icon="res://icon.png"
 
-[autoload]
+[display]
 
-SFX="*res://autoloads/SFX.tscn"
-SubwayTransition="*res://autoloads/subwayTransition.tscn"
+window/stretch/mode="2d"
 
 [editor_plugins]
 
