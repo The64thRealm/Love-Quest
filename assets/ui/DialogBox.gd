@@ -21,6 +21,7 @@ var read_time = 2
 var current_message = 0
 var display = ""
 var current_char = 0
+var enabled = false
 
 export(String) var character
 # the name of the folder where the character sprites will be accessed from
@@ -33,13 +34,15 @@ const defaultFilePath = "res://assets/characters/"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	play()
-	currentLine = -1
-	nextLine()
+	hide()
+
 
 func play():
+	enabled = true
 	show()
 	lines = loadDialog()
+	currentLine = -1
+	nextLine()
 
 func nextLine():
 	currentLine += 1
@@ -121,6 +124,8 @@ func show():
 	$NinePatchRect.visible = true
 
 func _input(event):
+	if !enabled:
+		return
 	if event.is_action_pressed("interact"):
 		nextLine()
 
