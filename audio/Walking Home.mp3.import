@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Walking Home.mp3-1140744b05699d237f2e984cd34246cd.mp3str"
+
+[deps]
+
+source_file="res://audio/Walking Home.mp3"
+dest_files=[ "res://.import/Walking Home.mp3-1140744b05699d237f2e984cd34246cd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

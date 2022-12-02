@@ -64,6 +64,7 @@ func checkOutOfBounds():
 		return true
 
 func endOfDialogReached():
+	$sprite.texture = load("res://assets/ui/canGodotStopYellingAtMe.png")
 	hide()
 	if reference_path != "":
 		get_tree().change_scene(reference_path)
@@ -128,6 +129,8 @@ func _input(event):
 	if !enabled:
 		return
 	if event.is_action_pressed("interact"):
+		nextLine()
+	if event.is_action_pressed("Action"):
 		nextLine()
 
 func loadDialog():

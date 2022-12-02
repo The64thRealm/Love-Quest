@@ -27,3 +27,9 @@ func read_input():
 		
 func _physics_process(delta):
 	read_input()
+	
+func idleDown():
+	$AnimationPlayer.play("idle_down")
+	
+func idleUp():
+	$AnimationPlayer.play('idle_up')

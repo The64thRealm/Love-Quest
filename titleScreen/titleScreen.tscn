@@ -1,10 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://titleScreen/LQtitlebg.jpg" type="Texture" id=1]
 [ext_resource path="res://titleScreen/titleScreenButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://titleScreen/LQ title.png" type="Texture" id=3]
+[ext_resource path="res://audio/Title Screen.mp3" type="AudioStream" id=4]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+
+func _ready():
+	pass
+"
 
 [node name="Node2D" type="Node2D"]
+script = SubResource( 1 )
 
 [node name="LQtitlebg" type="Sprite" parent="."]
 position = Vector2( 499, 302 )
@@ -33,3 +43,7 @@ reference_path = "res://inBattleMain/inBattleMain.tscn"
 position = Vector2( 488, 64 )
 scale = Vector2( 1.78889, 1.78889 )
 texture = ExtResource( 3 )
+
+[node name="titleTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
