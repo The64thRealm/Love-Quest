@@ -162,7 +162,6 @@ SFX="*res://autoloads/SFX.tscn"
 <<<<<<<UpdatedupstreamSFX="*res://autoloads/SFX.gd"
 SubwayTransition="*res://autoloads/subwayTransition.tscn"
 DialogBox="*res://assets/ui/DialogBox.tscn"
-Player="res://scenes/player.tscn"
 OfficeTransition="*res://autoloads/OfficeTransition.tscn"
 
 [display]
