@@ -14,6 +14,6 @@ func _on_Button_mouse_entered():
 		
 func _on_Button_Pressed():
 	if(reference_path != ""):
-		get_tree().change_scene("res://scenes/main.tscn")
+		get_tree().change_scene("res://scenes/office.tscn")
 	else:
 		get_tree().quit()

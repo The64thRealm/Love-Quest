@@ -156,6 +156,15 @@ config/name="Love Quest"
 run/main_scene="res://titleScreen/titleScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+<<<<<<< Updated upstream
+SFX="*res://autoloads/SFX.gd"
+=======
+SFX="*res://autoloads/SFX.tscn"
+SubwayTransition="*res://autoloads/subwayTransition.tscn"
+>>>>>>> Stashed changes
+
 [display]
 
 window/stretch/mode="2d"
