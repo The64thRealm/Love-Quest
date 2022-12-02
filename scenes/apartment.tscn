@@ -722,20 +722,15 @@ points = PoolVector2Array( 3.11001, 16, 0, 16, 0, 5.34253, 2.93001, 5.34253 )
 
 [node name="Node2D" type="Node2D"]
 
+[node name="apartmentTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
 [node name="base" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -327685, 3, 65542, -327684, 2, 0, -327683, 2, 1, -327682, 2, 1, -327681, 2, 1, -393216, 2, 1, -393215, 2, 1, -393214, 2, 1, -393213, 2, 2, -393212, 3, 65544, -262149, 3, 131078, -262148, 2, 65543, -262147, 2, 65537, -262146, 2, 65537, -262145, 2, 65537, -327680, 2, 65537, -327679, 2, 65537, -327678, 2, 65537, -327677, 2, 65545, -327676, 3, 131080, -196613, 3, 131078, -196612, 1, 0, -196611, 1, 1, -196610, 1, 1, -196609, 1, 1, -262144, 1, 1, -262143, 1, 1, -262142, 1, 1, -262141, 1, 1, -262140, 3, 131080, -131077, 3, 131078, -131076, 1, 65536, -131075, 1, 65537, -131074, 1, 65537, -131073, 1, 65537, -196608, 1, 65537, -196607, 1, 65537, -196606, 1, 65537, -196605, 1, 65537, -196604, 3, 131080, -65541, 3, 131078, -65540, 1, 65536, -65539, 1, 65537, -65538, 1, 65537, -65537, 1, 65537, -131072, 1, 65537, -131071, 1, 65537, -131070, 1, 65537, -131069, 1, 65537, -131068, 3, 131080, -5, 3, 131078, -4, 1, 65536, -3, 1, 65537, -2, 1, 65537, -1, 1, 65537, -65536, 1, 65537, -65535, 1, 65537, -65534, 1, 65537, -65533, 1, 65537, -65532, 3, 131080, 65531, 3, 131078, 65532, 1, 65536, 65533, 1, 65537, 65534, 1, 65537, 65535, 1, 65537, 0, 1, 65537, 1, 1, 65537, 2, 1, 65537, 3, 1, 65537, 4, 3, 131080, 131067, 3, 131078, 131068, 1, 65536, 131069, 1, 65537, 131070, 1, 65537, 131071, 1, 65537, 65536, 1, 65537, 65537, 1, 65537, 65538, 1, 65537, 65539, 1, 65537, 65540, 3, 131080, 196603, 3, 131078, 196604, 1, 65536, 196605, 1, 65537, 196606, 1, 65537, 196607, 1, 65537, 131072, 1, 65537, 131073, 1, 65537, 131074, 1, 65537, 131075, 1, 65537, 131076, 3, 131080, 262139, 3, 196614, 262140, 3, 196615, 262141, 3, 196615, 262142, 3, 196615, 262143, 3, 196615, 196608, 3, 196615, 196609, 3, 196615, 196610, 3, 196615, 196611, 3, 196615, 196612, 3, 196616 )
-
-[node name="GUI" type="CanvasLayer" parent="base"]
-script = ExtResource( 9 )
-
-[node name="DialogBox" parent="base/GUI" instance=ExtResource( 7 )]
-margin_left = 510.0
-margin_right = -411.0
-margin_bottom = -511.0
-dialogFile = "res://assets/ui/dialogJsons/HarperDialog2.json"
 
 [node name="Camera2D" type="Camera2D" parent="base"]
 position = Vector2( -1, -22 )
@@ -774,8 +769,14 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -196609, 0, 0, 65538, 3, 0, 131074, 3, 65536 )
 
-[node name="apartmentTheme" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-autoplay = true
+[node name="GUI" type="CanvasLayer" parent="base"]
+script = ExtResource( 9 )
+
+[node name="DialogBox" parent="base/GUI" instance=ExtResource( 7 )]
+margin_right = -921.0
+margin_bottom = -546.0
+spriteX = 200
+spriteY = 200
+dialogFile = "res://assets/ui/dialogJsons/HarperDialog2.json"
 
 [connection signal="endReached" from="base/GUI/DialogBox" to="base/GUI" method="_on_DialogBox_endReached"]

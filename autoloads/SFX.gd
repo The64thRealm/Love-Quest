@@ -1,4 +1,5 @@
 extends Node
+var endText = ""
 
 func play_sound():
 	$doorsfx.play()
@@ -13,6 +14,7 @@ func stop_music():
 	$walkingHome.stop()
 	$titleMusic.stop()
 	$battle.stop()
+	$endRoll.stop()
 
 func play_music():
 	stop_music()

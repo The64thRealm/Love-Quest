@@ -8,6 +8,7 @@ func _process(delta):
 			"Off":
 				pass
 			"Open":
+				action_state = "Off"
 				SFX.stop_music()
 				var harper = preload("res://scenes/harper.tscn").instance()
 				harper.idleUp()

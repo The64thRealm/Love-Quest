@@ -2,7 +2,7 @@ extends Node2D
 
 var projectile = preload("res://assets/ui/BattleMinigames/DodgeGame/projectile.tscn")
 #export(String, FILE, "*.json") 
-var gameFile #= "res://assets/ui/BattleMinigames/DodgeGame/patterns/attackPattern1.json"
+var gameFile = "res://assets/ui/BattleMinigames/DodgeGame/patterns/attackPattern1.json"
 var projectilePattern = []
 var currentPattern = 0 
 var totalProjectiles = 0 
@@ -14,8 +14,11 @@ var wait = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AnimationPlayer.play("load in")
 	show()
 	projectilePattern = loadPattern()
+
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -28,6 +31,7 @@ func loadPattern():
 		return parse_json(file.get_as_text()) 
 
 func handlePlayerHit():
+	$hit.play()
 	projectilesHit += 1
 	$player.flashRed()
 
@@ -38,6 +42,8 @@ func _on_Timer_timeout():
 	placePattern()
 	currentPattern += 1
 	if currentPattern >= len(projectilePattern):
+		$AnimationPlayer.play_backwards("load in")
+		yield(get_tree().create_timer(2), "timeout")
 		win()
 		return
 	if 'wait' in projectilePattern[currentPattern]:
@@ -46,6 +52,7 @@ func _on_Timer_timeout():
 
 func placePattern():
 	if 'projs' in projectilePattern[currentPattern]:
+		$shoot.play()
 		var initAngle = 0
 		var travelAngle = 0
 		var along = 0

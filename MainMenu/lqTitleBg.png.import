@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/citynight.png-2da61a4ba906ee31f7763800779a8443.stex"
+path="res://.import/lqTitleBg.png-2d8e8d7c9759369029cd2f5cd338844f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MainMenu/citynight.png"
-dest_files=[ "res://.import/citynight.png-2da61a4ba906ee31f7763800779a8443.stex" ]
+source_file="res://MainMenu/lqTitleBg.png"
+dest_files=[ "res://.import/lqTitleBg.png-2d8e8d7c9759369029cd2f5cd338844f.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

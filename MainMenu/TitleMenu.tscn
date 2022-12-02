@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MainMenu/QuitButton.gd" type="Script" id=1]
 [ext_resource path="res://MainMenu/PlayButton.gd" type="Script" id=2]
 [ext_resource path="res://MainMenu/lqlogofinal.png" type="Texture" id=3]
-[ext_resource path="res://MainMenu/citynight.png" type="Texture" id=4]
+[ext_resource path="res://MainMenu/lqTitleBg.png" type="Texture" id=4]
 [ext_resource path="res://MainMenu/PixelatedLove/PixelatedLove/pixelated-loveNew.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://MainMenu/CreditsButton.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=2]
 size = 41
@@ -71,7 +72,37 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -400, 369 ), Vector2( 59, 369 ) ]
+"values": [ Vector2( -400, 369 ), Vector2( 49, 369 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -400, 369 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "movingrightsett"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -400, 444 ), Vector2( 49, 444 ) ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -111,7 +142,6 @@ anchor_bottom = 1.0
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_scale = Vector2( 1.07662, 1.07662 )
 texture = ExtResource( 4 )
 expand = true
 
@@ -134,7 +164,26 @@ playback_speed = 0.8
 anims/RESET = SubResource( 11 )
 anims/movingrightplay = SubResource( 12 )
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="CreditsButton" type="Button" parent="."]
+margin_left = -400.0
+margin_top = 369.0
+margin_right = -166.0
+margin_bottom = 446.0
+custom_colors/font_color = Color( 1, 0.996078, 0.996078, 1 )
+custom_colors/font_color_hover = Color( 0.0666667, 0.964706, 0.164706, 1 )
+custom_colors/font_color_pressed = Color( 0.870588, 0.941176, 0.0392157, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "CREDITS"
+flat = true
+script = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CreditsButton"]
+autoplay = "movingrightsett"
+playback_speed = 0.8
+anims/RESET = SubResource( 13 )
+anims/movingrightsett = SubResource( 14 )
+
+[node name="QuitButton2" type="Button" parent="."]
 margin_left = -400.0
 margin_top = 369.0
 margin_right = -166.0
@@ -147,11 +196,11 @@ text = "QUIT"
 flat = true
 script = ExtResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="QuitButton"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="QuitButton2"]
 autoplay = "movingrightsett"
 playback_speed = 0.8
-anims/RESET = SubResource( 13 )
-anims/movingrightsett = SubResource( 14 )
+anims/RESET = SubResource( 15 )
+anims/movingrightsett = SubResource( 16 )
 
 [node name="LoveQuestTitle" type="TextureButton" parent="."]
 margin_left = 22.0
@@ -167,4 +216,5 @@ anims/Movedowntitle = SubResource( 7 )
 anims/RESET = SubResource( 8 )
 
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="CreditsButton" to="CreditsButton" method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="QuitButton2" to="QuitButton2" method="_on_QuitButton_pressed"]

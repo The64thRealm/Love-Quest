@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/damage.ogg-f6a6847466b902247eecd246d1d00b00.oggstr"
+
+[deps]
+
+source_file="res://assets/ui/BattleMinigames/DodgeGame/damage.ogg"
+dest_files=[ "res://.import/damage.ogg-f6a6847466b902247eecd246d1d00b00.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,8 +1,10 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/ui/BattleMinigames/DodgeGame/dodgePlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/BattleMinigames/DodgeGame/DodgeGame.gd" type="Script" id=3]
+[ext_resource path="res://assets/ui/BattleMinigames/DodgeGame/damage.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/ui/BattleMinigames/DodgeGame/laser.wav" type="AudioStream" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -251,6 +253,38 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 3/z_index = 0
 
+[sub_resource type="Animation" id=41]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=42]
+resource_name = "load in"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="DodgeGame" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -271,5 +305,18 @@ autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2( 0.25, 0.25 )
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+pitch_scale = 0.39
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 41 )
+"anims/load in" = SubResource( 42 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

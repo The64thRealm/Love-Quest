@@ -1,6 +1,7 @@
 extends "res://assets/ui/DialogBox.gd"
 
 var patienceToAdd = 0
+var lost = false
 
 func _ready():
 	buttons = ["../TextureButton1", "../TextureButton2"]
@@ -9,14 +10,16 @@ func _ready():
 	nextLine()
 
 func battleWon():
-	SFX.play_end()
-	get_tree().change_scene("res://scenes/win.tscn")
+	SFX.endText = "You've begun to understand Harper a little better..."
 	hide()
+	OfficeTransition.change_scene("res://scenes/end.tscn")
 
 func battleLost():
-	SFX.play_end()
-	get_tree().change_scene("res://scenes/loss.tscn")
-	hide()
+	if !lost:
+		lost = true
+		SFX.endText = "You lost\nThe rift between you and Harper grows..."
+		hide()
+		OfficeTransition.change_scene("res://scenes/end.tscn")
 
 func endOfDialogReached():
 	battleWon()
@@ -64,6 +67,6 @@ func addPatience(percentage):
 	if patienceToAdd < 0:
 		add = patienceToAdd * (percentage + 0.5)
 	else:
-		add = patienceToAdd * (1 - percentage)
+		add = patienceToAdd * (1 - 4 * percentage)
 	
 	get_node("../PatienceBar").addPatience(add)

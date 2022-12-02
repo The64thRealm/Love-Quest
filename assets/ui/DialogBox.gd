@@ -11,6 +11,9 @@ static func fillVariableDialogText(rawDialog) :
 		# replaces keywords like <name> with the actual player name
 	return rawDialog
 
+export(int) var spriteX = -1
+export(int) var spriteY = -1
+
 export(String, FILE, "*.json") var dialogFile = "res://assets/ui/testBattle.json"
 # the file where the dialog will be read from
 var lines = []
@@ -39,6 +42,9 @@ func _ready():
 
 
 func play():
+	if spriteX != -1 or spriteY != -1:
+		$sprite.position = Vector2(spriteX, spriteY)
+	
 	enabled = true
 	show()
 	lines = loadDialog()
@@ -65,7 +71,7 @@ func checkOutOfBounds():
 		return true
 
 func endOfDialogReached():
-	$sprite.texture = load("res://assets/ui/canGodotStopYellingAtMe.png")
+	$sprite.texture = null
 	hide()
 	emit_signal("endReached")
 

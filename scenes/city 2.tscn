@@ -1033,7 +1033,8 @@ anchor_right = 0.508
 anchor_bottom = 0.375
 margin_right = -416.192
 margin_bottom = -180.0
-dialogFile = "res://assets/ui/dialogJsons/HarperDialog1.json"
+spriteX = 0
+spriteY = 0
 
 [node name="buildings and stuff" type="TileMap" parent="base"]
 tile_set = SubResource( 2 )
