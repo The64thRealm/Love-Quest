@@ -22,7 +22,7 @@ var current_message = 0
 var display = ""
 var current_char = 0
 var enabled = false
-export(String, FILE, "*.tscn") var reference_path = ""
+signal endReached
 
 export(String) var character
 # the name of the folder where the character sprites will be accessed from
@@ -64,10 +64,10 @@ func checkOutOfBounds():
 		return true
 
 func endOfDialogReached():
+	
 	$sprite.texture = load("res://assets/ui/canGodotStopYellingAtMe.png")
 	hide()
-	if reference_path != "":
-		get_tree().change_scene(reference_path)
+	emit_signal("endReached")
 
 func updateUI():
 	updateDialog()
