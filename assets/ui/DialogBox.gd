@@ -60,6 +60,7 @@ func skipToLine(line):
 
 func checkOutOfBounds():
 	if currentLine >= len(lines):
+		enabled = false
 		endOfDialogReached()
 		return true
 

@@ -158,8 +158,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-SFX="*res://autoloads/SFX.tscn"
 <<<<<<<UpdatedupstreamSFX="*res://autoloads/SFX.gd"
+SFX="*res://autoloads/SFX.tscn"
 SubwayTransition="*res://autoloads/subwayTransition.tscn"
 DialogBox="*res://assets/ui/DialogBox.tscn"
 Player="res://scenes/player.tscn"

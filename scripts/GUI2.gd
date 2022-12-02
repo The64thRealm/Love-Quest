@@ -13,7 +13,7 @@ func _process(delta):
 				var harper = preload("res://scenes/harper.tscn").instance()
 				harper.idleUp()
 				harper.position = Vector2(16.0,33.0)
-				get_tree().get_root().get_node("Node2D/base/buildings and stuff").add_child(harper)
+				get_node("../buildings and stuff").add_child(harper)
 				player.cantMove()
 				player.idleDown()
 				$DialogBox.play()

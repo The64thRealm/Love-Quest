@@ -2385,7 +2385,7 @@ tracks/0/keys = {
 "values": [ 3 ]
 }
 
-[sub_resource type="Animation" id=104]
+[sub_resource type="Animation" id=103]
 resource_name = "WalkLeft"
 loop = true
 step = 0.25
@@ -2402,7 +2402,7 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=106]
+[sub_resource type="Animation" id=104]
 resource_name = "WalkRight"
 length = 0.8
 loop = true
@@ -2505,8 +2505,8 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite")
 anims/Idle = SubResource( 102 )
-anims/WalkLeft = SubResource( 104 )
-anims/WalkRight = SubResource( 106 )
+anims/WalkLeft = SubResource( 103 )
+anims/WalkRight = SubResource( 104 )
 
 [connection signal="endReached" from="Base/GUI/DialogBox" to="." method="_on_DialogBox_endReached"]
 

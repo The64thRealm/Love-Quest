@@ -1014,7 +1014,7 @@ points = PoolVector2Array( 1.89481, 0.151062, 13.4694, 0, 13.7386, 8.09177, 2.02
 } ]
 9/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.431373, 0.439216, 0.623529, 1 )
