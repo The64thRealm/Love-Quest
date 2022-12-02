@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var can_move = true
+
 func read_input():
 	var velocity = Vector2.ZERO
 	
@@ -26,10 +28,18 @@ func read_input():
 		move_and_slide(velocity * 80)
 		
 func _physics_process(delta):
-	read_input()
+	if can_move:
+		read_input()
 	
 func idleDown():
 	$AnimationPlayer.play("idle_down")
 	
 func idleUp():
 	$AnimationPlayer.play('idle_up')
+	
+func cantMove():
+	$AnimationTree.get("parameters/playback").travel("Idle")
+	can_move = false
+
+func canMove():
+	can_move = true
