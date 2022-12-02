@@ -10,6 +10,7 @@ func _process(delta):
 			"Open":
 				SFX.play_sound()
 				yield(get_tree().create_timer(0.9), "timeout")
+				SFX.play_music()
 				get_tree().change_scene("res://scenes/city.tscn")
 				pass
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Apartment.mp3-f615692dbdaa8e115e0cc86cd68f1c2b.mp3str"
+
+[deps]
+
+source_file="res://audio/The Apartment.mp3"
+dest_files=[ "res://.import/The Apartment.mp3-f615692dbdaa8e115e0cc86cd68f1c2b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

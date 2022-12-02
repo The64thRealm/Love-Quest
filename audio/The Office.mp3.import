@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Office.mp3-8a0fd3e17ec972ad9761f06dd9e7d764.mp3str"
+
+[deps]
+
+source_file="res://audio/The Office.mp3"
+dest_files=[ "res://.import/The Office.mp3-8a0fd3e17ec972ad9761f06dd9e7d764.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
