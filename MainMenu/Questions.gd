@@ -9,4 +9,4 @@ func _ready():
 
 func _on_Questions_text_entered(new_text):
 	DialogBox.addFormatStrings("<name>", new_text)
-	SceneTransition.change_scene("res://Favortiefood.tscn")
+	get_tree().change_scene("res://MainMenu/Favortiefood.tscn")

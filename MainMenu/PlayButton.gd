@@ -7,4 +7,4 @@ func _ready():
 
 
 func _on_PlayButton_pressed():
-	SceneTransition.change_scene("res://QuestionMenu.tscn")
+	get_tree().change_scene("res://MainMenu/QuestionMenu.tscn")

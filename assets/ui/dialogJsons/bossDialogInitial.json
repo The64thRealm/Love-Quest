@@ -7,8 +7,5 @@
     {"text": "I’ve generously given you eight hours to complete your tasks."},
     {"text": "Even I could’ve done this in half the time! Now get back to work. Don’t leave until you get this done."},
     {"name": "", "text": ""},
-    {"name": "Boss", "text": "Do not disappoint me again, <name>."},
-    {"name": "<name>", "text": "Whew. I’m finally done."},
-    {"text": "Harper will be worried sick, I better hurry home so she doesn’t worry too much."},
-    {"text": "I’ll need to take the subway at night… Hopefully it’s not too dangerous."}
+    {"name": "Boss", "text": "Do not disappoint me again, <name>."}
 ]
