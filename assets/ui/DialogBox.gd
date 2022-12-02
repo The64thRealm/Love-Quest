@@ -100,6 +100,12 @@ func updateActions():
 				get_node(buttons[i]).skipToLine = actions[i]['skipToLine']
 			else:
 				get_node(buttons[i]).skipToLine = -1
+			if 'scene' in actions[i]:
+				get_node(buttons[i]).reference_path = actions[i]['scene']
+				get_node(buttons[i]).pattern = actions[i]['pattern']
+			else:
+				get_node(buttons[i]).reference_path = ""
+				get_node(buttons[i]).pattern = ""
 	elif determineIfClearLine():
 		forceChoice = false
 		for button in buttons:

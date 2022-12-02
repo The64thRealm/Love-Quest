@@ -19,5 +19,6 @@ func _on_Food_text_entered(text1):
 		response_node.show()
 		response_node.text = template + text1 + t
 		DialogBox.addFormatStrings("<food>", text1)
+		editable = false
 		yield(get_tree().create_timer(2), "timeout")
 		OfficeTransition.change_scene("res://scenes/officeInitial.tscn")

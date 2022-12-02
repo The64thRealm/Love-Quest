@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var speed = 100
+var speed = 240
 var hit = false
 
 #func _ready():
@@ -15,4 +15,5 @@ func _physics_process(delta):
 
 func _on_VisibilityNotifier2D_viewport_exited(viewport):
 #	print("outOfBounds") 
+	yield(get_tree().create_timer(3), "timeout")
 	queue_free()

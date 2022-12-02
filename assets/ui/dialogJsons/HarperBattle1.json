@@ -1,31 +1,65 @@
 [
     {
         "character": "Harper",
-        "patienceDecay": 10,
+        "patienceDecay": 8,
         "name": "Harper",
         "text": "I just wanted you to come home early for once.",
-        "actions": [{"actionText": "It’s not a big deal", "addPatience": -10}, {"actionText": "I can try harder next time.", "addPatience": 10}]
+        "sprite": "hurt",
+        "actions": [
+            {"actionText": "It’s not a big deal", "addPatience": -20,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern1"},
+            {"actionText": "I can try harder next time.", "addPatience": 20,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern4"}
+        ]
     },
     {
         "text": "Why won’t you listen to how I’m feeling?",
-        "actions": [{"actionText": "I want to, but I can’t always make you happy.", "addPatience": 10}, {"actionText": "You are getting way too worked up.", "addPatience": -10}]
+        "sprite": "hurt",
+        "actions": [
+            {"actionText": "I want to, but I can’t always make you happy.", "addPatience": 20,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern2"},
+            {"actionText": "You are getting way too worked up.", "addPatience": -20,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern3"}]
     },
     {
         "text": "It seems like you care more about your job than me.",
-        "actions": [{"actionText": "I’m losing sleep over this argument.", "addPatience": -10}, {"actionText": "I do a lot for you too, you know.", "addPatience": -10}]
+        "sprite": "pissed",
+        "actions": [
+            {"actionText": "I’m losing sleep over this argument.", "addPatience": -20,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern5"},
+            {"actionText": "I do a lot for you too, you know.", "addPatience": 20,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern1"}
+        ]
     },
     {
         "text": "Just tell me the truth and I promise I won’t get mad, okay?",
-        "actions": [{"actionText": "I really do care about you.", "addPatience": 10}, {"actionText": "You make me feel like I’m always doing something wrong.", "addPatience": -10}],
-        "patienceDecay": 10
+        "sprite": "hurt",
+        "actions": [
+            {"actionText": "I really do care about you.", "addPatience": 30,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern4"},
+            {"actionText": "You make me feel like I’m always doing something wrong.", "addPatience": -30,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern2"}
+        ],
+        "patienceDecay": 16
     },
     {
         "text": "Do you even still like me?",
-        "sprite": "confused",
-        "actions": [{"actionText": "I’ll do better to be here for you.", "addPatience": 10}, {"actionText": "You act as if I abandoned you for someone else.", "addPatience": -10}]
+        "sprite": "hurt",
+        "actions": [
+            {"actionText": "I’ll do better to be here for you.", "addPatience": 30,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern3"}, 
+            {"actionText": "You act as if I abandoned you for someone else.", "addPatience": -30,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern1"}
+        ]
     },
     {
         "text": "We were supposed to have our couple’s night tonight.",
-        "actions": [{"actionText": "You never told me that.", "addPatience": -10}, {"actionText": "I’ll do better to be here for you.", "addPatience": 10}]
+        "sprite": "yandere",
+        "actions": [
+            {"actionText": "You never told me that.", "addPatience": -30,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern2"},
+            {"actionText": "I’ll do better to be here for you.", "addPatience": 30,
+            "scene": "DodgeGame/DodgeGame", "pattern": "DodgeGame/patterns/attackPattern5"}
+        ]
     }
 ]

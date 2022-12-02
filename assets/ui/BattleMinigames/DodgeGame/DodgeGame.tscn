@@ -253,7 +253,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="DodgeGame" type="Node2D"]
 script = ExtResource( 3 )
-dodgeGameFile = "res://assets/ui/BattleMinigames/DodgeGame/attackPattern1.json"
 
 [node name="base" type="TileMap" parent="."]
 position = Vector2( 0, 20 )
@@ -266,7 +265,7 @@ tile_data = PoolIntArray( -327685, 3, 65542, -327684, 2, 0, -327683, 2, 1, -3276
 
 [node name="Timer" type="Timer" parent="."]
 pause_mode = 2
-wait_time = 5.0
+wait_time = 2.0
 one_shot = true
 autostart = true
 

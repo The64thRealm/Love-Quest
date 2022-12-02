@@ -19,6 +19,8 @@ func _ready():
 
 func addPatience(add):
 	patience += add
+	print("added ")
+	print(add)
 
 func setPatience(newPatience):
 	patience = newPatience
@@ -67,4 +69,4 @@ func _process(delta):
 	updateColor()
 	if checkPatience():
 		# print("dead")
-		get_node("..").battleLost()
+		get_node("../DialogBox").battleLost()

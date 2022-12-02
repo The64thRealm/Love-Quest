@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/ui/BattleMinigames/DodgeGame/redColorShader.gdshader" type="Shader" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5, 7 )
+extents = Vector2( 3, 4 )
 
 [sub_resource type="GDScript" id=25]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://MainMenu/Food.gd" type="Script" id=1]
 [ext_resource path="res://MainMenu/PixelatedLove/PixelatedLove/pixelated-loveNew.ttf" type="DynamicFontData" id=2]
@@ -7,8 +7,6 @@
 [sub_resource type="DynamicFont" id=2]
 size = 45
 font_data = ExtResource( 2 )
-
-[sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
@@ -39,7 +37,6 @@ margin_top = 301.0
 margin_right = 847.0
 margin_bottom = 407.0
 custom_fonts/font = SubResource( 2 )
-custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 caret_blink = true
 script = ExtResource( 1 )

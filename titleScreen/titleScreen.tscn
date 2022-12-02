@@ -10,7 +10,7 @@ script/source = "extends Node2D
 
 
 func _ready():
-	pass
+	$titleTheme.play()
 "
 
 [node name="Node2D" type="Node2D"]
