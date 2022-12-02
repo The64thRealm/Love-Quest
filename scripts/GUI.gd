@@ -11,7 +11,8 @@ func _process(delta):
 				SFX.play_sound()
 				yield(get_tree().create_timer(0.9), "timeout")
 				SFX.play_music()
-				get_tree().change_scene("res://scenes/city.tscn")
+				OfficeTransition.change_scene("res://scenes/city 2.tscn")
+#				get_tree().change_scene("res://scenes/city.tscn")
 				pass
 
 func OnDoorAreaEntered(body):

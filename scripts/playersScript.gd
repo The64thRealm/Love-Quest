@@ -32,10 +32,16 @@ func _physics_process(delta):
 		read_input()
 	
 func idleDown():
-	$AnimationPlayer.play("idle_down")
+	var velocity = Vector2.ZERO
+	velocity.y += 1.0
+	$AnimationTree.get("parameters/playback").travel("Idle")
+	$AnimationTree.set("parameters/Idle/blend_position", velocity)
 	
 func idleUp():
-	$AnimationPlayer.play('idle_up')
+	var velocity = Vector2.ZERO
+	velocity.y -= 1.0
+	$AnimationTree.get("parameters/playback").travel("Idle")
+	$AnimationTree.set("parameters/Idle/blend_position", velocity)
 	
 func cantMove():
 	$AnimationTree.get("parameters/playback").travel("Idle")
