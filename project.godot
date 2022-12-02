@@ -158,11 +158,12 @@ config/icon="res://icon.png"
 
 [autoload]
 
-<<<<<<<UpdatedupstreamSFX="*res://autoloads/SFX.gd"
 SFX="*res://autoloads/SFX.tscn"
+<<<<<<<UpdatedupstreamSFX="*res://autoloads/SFX.gd"
 SubwayTransition="*res://autoloads/subwayTransition.tscn"
 DialogBox="*res://assets/ui/DialogBox.tscn"
-Player="*res://scenes/player.tscn"
+Player="res://scenes/player.tscn"
+OfficeTransition="*res://autoloads/OfficeTransition.tscn"
 
 [display]
 
@@ -243,6 +244,11 @@ dialogic_default_action={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":88,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+Text={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":69,"unicode":0,"echo":false,"script":null)
  ]
 }
 
