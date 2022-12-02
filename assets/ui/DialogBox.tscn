@@ -16,8 +16,7 @@ font_data = ExtResource( 2 )
 size = 12
 font_data = ExtResource( 6 )
 
-[node name="DialogBox" type="Node2D"]
-scale = Vector2( 10, 10 )
+[node name="DialogBox" type="Control"]
 script = ExtResource( 1 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
