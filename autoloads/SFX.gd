@@ -14,3 +14,9 @@ func play_music():
 	
 func stop_music():
 	$walkingHome.stop()
+
+func play_battle():
+	$battle.play()
+	
+func stop_battle():
+	$battle.stop()

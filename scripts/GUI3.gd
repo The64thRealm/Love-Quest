@@ -11,4 +11,5 @@ func _ready():
 
 
 func _on_DialogBox_endReached():
-	OfficeTransition.change_scene("res://assets/ui/BattleMinigames/DodgeGame/DodgeGame.tscn")
+	SFX.play_battle()
+	OfficeTransition.change_scene("res://inBattleMain/inBattleMain.tscn")
