@@ -13,6 +13,8 @@ func _process(delta):
 				harper.idleUp()
 				harper.position = Vector2(16.0,33.0)
 				get_node("../buildings and stuff/addons").add_child(harper)
+				SFX.play_boom()
+				get_tree().get_root().get_node("Node2D/base/buildings and stuff/addons").add_child(harper)
 				player.cantMove()
 				player.idleDown()
 				$DialogBox.play()
@@ -26,6 +28,7 @@ func OnApartAreaExited(body):
 
 
 func _on_DialogBox_endReached():
+	player.idleUp()
 	SFX.play_sound()
 	yield(get_tree().create_timer(0.9), "timeout")
 	get_tree().change_scene("res://scenes/apartment.tscn")

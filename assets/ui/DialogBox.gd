@@ -65,7 +65,6 @@ func checkOutOfBounds():
 		return true
 
 func endOfDialogReached():
-	
 	$sprite.texture = load("res://assets/ui/canGodotStopYellingAtMe.png")
 	hide()
 	emit_signal("endReached")
@@ -141,8 +140,6 @@ func _input(event):
 		if forceChoice:
 			return
 		nextLine()
-#	if event.is_action_pressed("Action"):
-#		nextLine()
 
 func loadDialog():
 	current_message = 0

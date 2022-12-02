@@ -18,3 +18,9 @@ func stop_music():
 
 func play_title():
 	$titleMusic.play()
+
+func play_battle():
+	$battle.play()
+	
+func stop_battle():
+	$battle.stop()

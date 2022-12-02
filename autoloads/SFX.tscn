@@ -6,6 +6,7 @@
 [ext_resource path="res://audio/Vine-boom-sound-effect.mp3" type="AudioStream" id=4]
 [ext_resource path="res://audio/Walking Home.mp3" type="AudioStream" id=5]
 [ext_resource path="res://audio/Title Screen.mp3" type="AudioStream" id=6]
+[ext_resource path="res://audio/Arguing (Battle Theme).mp3" type="AudioStream" id=7]
 
 [node name="SFX" type="Node"]
 script = ExtResource( 1 )
@@ -24,3 +25,6 @@ stream = ExtResource( 5 )
 
 [node name="titleMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+
+[node name="battle" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
