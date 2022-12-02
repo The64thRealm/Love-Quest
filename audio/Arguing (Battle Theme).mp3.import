@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Arguing (Battle Theme).mp3-9626ae19a3ffd288f52b9e6fd453ed9d.mp3str"
+
+[deps]
+
+source_file="res://audio/Arguing (Battle Theme).mp3"
+dest_files=[ "res://.import/Arguing (Battle Theme).mp3-9626ae19a3ffd288f52b9e6fd453ed9d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

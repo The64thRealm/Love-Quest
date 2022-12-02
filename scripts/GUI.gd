@@ -4,19 +4,18 @@ var action_state = "Off"
 
 func _process(delta):
 	if Input.is_action_just_pressed("Action"):
-		print("I pressed action")
 		match action_state:
 			"Off":
-				print("Nothing to do here")
 				pass
 			"Open":
-				print("I'm getting outta here")
+				SFX.play_sound()
+				yield(get_tree().create_timer(0.9), "timeout")
+				SFX.play_music()
+				get_tree().change_scene("res://scenes/city.tscn")
 				pass
 
 func OnDoorAreaEntered(body):
 	action_state = "Open"
-	print("inDoor")
 	
 func OnDoorAreaExited(body):
 	action_state = "Off"
-	print("outDoor")

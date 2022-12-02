@@ -1,0 +1,39 @@
+[
+    {
+        "character": "TempChar",
+        "patienceDecay": 5,
+        "sprite": "TempSprite1.png",
+        "name": "this is a character name and it should get cut off when it can't fit anymore",
+        "text": "hi I am typing a paragraph to see how this looks",
+        "actions": [{"actionText": "action1", "addPatience": -10}, {"actionText": "action2", "addPatience": 10}]
+    },
+    {
+        "text": "testing that everything remains the same",
+        "actions": [{"actionText": "action3", "addPatience": -10, "skipToLine": 7}, {"actionText": "action4", "addPatience": 20}]
+    },
+    {
+        "patienceDecay": 20,
+        "sprite": "TempSprite2.png",
+        "name": "ugh"
+    },
+    {
+        "patienceDecay": 5,
+        "sprite": "TempSprite3.png",
+        "name": "name2",
+        "text": "more text",
+        "actions": [{"actionText": "action5", "addPatience": -10}, {"actionText": "idk", "addPatience": 10}]
+    },
+    {   
+        "patienceDecay": 1,
+        "sprite": "TempSprite1.png",
+        "name": "stuff",
+        "text": ""
+    },
+    {},
+    {},
+    {
+        
+        "clear": true,
+        "text": "line 7"
+    }
+]

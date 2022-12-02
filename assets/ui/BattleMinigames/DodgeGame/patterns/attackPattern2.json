@@ -1,0 +1,19 @@
+[
+    {"projs": [{"side": "t", "along": 0.5}, {"side": "t", "along": -0.5}, {"side": "r", "along": 0.5}, {"side": "r", "along": -0.5}, {"side": "b", "along": 0.5}, {"side": "b", "along": -0.5}, {"side": "l", "along": 0.5}, {"side": "l", "along": -0.5}], "wait": 2},
+    {"projs": [{"side": "t"}, {"side": "t", "along": -1}, {"side": "t", "along": 1}, {"side": "r"}, {"side": "r", "along": -1}, {"side": "r", "along": 1}, {"side": "b"}, {"side": "b", "along": -1}, {"side": "b", "along": 1}, {"side": "l"}, {"side": "l", "along": -1}, {"side": "l", "along": 1}]},
+    {"projs": [{"side": "t", "along": 0.5}, {"side": "t", "along": -0.5}, {"side": "r", "along": 0.5}, {"side": "r", "along": -0.5}, {"side": "b", "along": 0.5}, {"side": "b", "along": -0.5}, {"side": "l", "along": 0.5}, {"side": "l", "along": -0.5}]},
+    {"projs": [{"side": "t"}, {"side": "t", "along": -1}, {"side": "t", "along": 1}, {"side": "r"}, {"side": "r", "along": -1}, {"side": "r", "along": 1}, {"side": "b"}, {"side": "b", "along": -1}, {"side": "b", "along": 1}, {"side": "l"}, {"side": "l", "along": -1}, {"side": "l", "along": 1}]},
+    {"projs": [{"angle0": 20, "dir": 160}, {"angle0": 110, "dir": 250}, {"angle0": -70, "dir": 70}, {"angle0": 200, "dir": -20}], "wait": 3},
+    {"projs": [{"angle0": 0}, {"angle0": 180}], "wait": 0.75},
+    {"projs": [{"angle0": 80, "dir": 220}, {"angle0": 170, "dir": 310}, {"angle0": -10, "dir": 130}, {"angle0": 260, "dir": 40}]},
+    {"projs": [{"angle0": -60}, {"angle0": 120}]},
+    {"projs": [{"angle0": 140, "dir": 280}, {"angle0": 230, "dir": 10}, {"angle0": 50, "dir": 190}, {"angle0": -40, "dir": 100}]},
+    {"projs": [{"angle0": -120}, {"angle0": 60}]},
+    {"projs": [{"angle0": 200, "dir": -20}, {"angle0": 290, "dir": 70}, {"angle0": 110, "dir": 250}, {"angle0": 20, "dir": 160}]},
+    {"projs": [{"angle0": 180}, {"angle0": 0}]},
+    {"projs": [{"angle0": 260, "dir": 40}, {"angle0": -10, "dir": 130}, {"angle0": 170, "dir": -50}, {"angle0": 80, "dir": 220}]},
+    {"projs": [{"angle0": 120}, {"angle0": -60}]},
+    {"projs": [{"angle0": -40, "dir": 100}, {"angle0": 50, "dir": 190}, {"angle0": 230, "dir": 10}, {"angle0": 140, "dir": 280}]},
+    {"projs": [{"angle0": 60}, {"angle0": 240}]},
+    {"wait": 3}
+]

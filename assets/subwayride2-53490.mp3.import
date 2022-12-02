@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/subwayride2-53490.mp3-2ed15960ba47cc6779483319ba095d1b.mp3str"
+
+[deps]
+
+source_file="res://assets/subwayride2-53490.mp3"
+dest_files=[ "res://.import/subwayride2-53490.mp3-2ed15960ba47cc6779483319ba095d1b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

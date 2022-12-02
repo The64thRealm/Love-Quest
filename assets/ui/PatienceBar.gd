@@ -1,14 +1,15 @@
-extends Node2D
+extends Control
 
 export(Gradient) var barGradient
 
 export(float) var decayPerSecond
 
-signal outOfPatience
+#signal outOfPatience
 
 const patienceTweening = 0.1
 
 var patience
+var enabled = true
 onready var progressBar = get_node("NinePatchRect/TextureProgress")
 
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +19,8 @@ func _ready():
 
 func addPatience(add):
 	patience += add
+	print("added ")
+	print(add)
 
 func setPatience(newPatience):
 	patience = newPatience
@@ -60,8 +63,10 @@ func updateProgressDisplay():
 func _process(delta):
 	# print("progress: " + str(progressBar.value))
 	# print("actual progress: " + str(patience))
+	if !enabled:
+		return
 	updateProgress(delta)
 	updateColor()
 	if checkPatience():
 		# print("dead")
-		emit_signal("outOfPatience")
+		get_node("../DialogBox").battleLost()
