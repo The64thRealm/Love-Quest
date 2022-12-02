@@ -5,3 +5,6 @@ func play_sound():
 
 func play_train():
 	$train.play()
+
+func play_boom():
+	$vineboom.play()

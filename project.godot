@@ -158,7 +158,12 @@ config/icon="res://icon.png"
 
 [autoload]
 
+<<<<<<< Updated upstream
 SFX="*res://autoloads/SFX.gd"
+=======
+SFX="*res://autoloads/SFX.tscn"
+SubwayTransition="*res://autoloads/subwayTransition.tscn"
+>>>>>>> Stashed changes
 
 [display]
 

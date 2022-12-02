@@ -8,6 +8,11 @@ func _process(delta):
 			"Off":
 				pass
 			"Open":
+				var harper = preload("res://scenes/harper.tscn").instance()
+				harper.position = Vector2(16.0,33.0)
+				SFX.play_boom()
+				get_tree().get_root().get_node("Node2D/base/buildings and stuff/addons").add_child(harper)
+				yield(get_tree().create_timer(3), "timeout")
 				SFX.play_sound()
 				yield(get_tree().create_timer(0.9), "timeout")
 				get_tree().change_scene("res://scenes/apartment.tscn")
