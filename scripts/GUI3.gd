@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+onready var player = get_node("../stuff/addons/player2")
 
 func _ready():
 	

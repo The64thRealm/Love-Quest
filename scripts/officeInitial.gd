@@ -1,5 +1,6 @@
 extends Node2D
 
+var HEY = preload("res://audio/HEY.wav")
 var script1Over = false
 # Declare member variables here. Examples:
 # var a = 2
@@ -8,9 +9,11 @@ var scriptNum = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	yield(get_tree().create_timer(3), "timeout")
+	yield(get_tree().create_timer(0.2), "timeout")
+	$AudioStreamPlayer2D.stream = HEY
+	$AudioStreamPlayer2D.play()
 	$Base/GUI/DialogBox.play()
-	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

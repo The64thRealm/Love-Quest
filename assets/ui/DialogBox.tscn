@@ -21,11 +21,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_scale = Vector2( 5, 5 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 dialogFile = "res://assets/ui/dialogJsons/HarperBattle1.json"
-
-[node name="sprite" type="Sprite" parent="."]
-position = Vector2( 83.9, 31.2 )
-scale = Vector2( 0.05, 0.05 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 anchor_right = 1.0
@@ -138,3 +137,7 @@ clip_text = true
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 100, 100 )
+scale = Vector2( 0.1, 0.1 )

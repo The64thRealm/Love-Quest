@@ -2456,7 +2456,7 @@ margin_right = -863.0
 margin_bottom = -454.0
 dialogFile = "res://assets/ui/dialogJsons/bossDialogInitial.json"
 
-[node name="NinePatchRect" parent="Base/GUI/DialogBox" index="1"]
+[node name="NinePatchRect" parent="Base/GUI/DialogBox" index="0"]
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": true
@@ -2507,6 +2507,8 @@ root_node = NodePath("../Sprite")
 anims/Idle = SubResource( 102 )
 anims/WalkLeft = SubResource( 103 )
 anims/WalkRight = SubResource( 104 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="endReached" from="Base/GUI/DialogBox" to="." method="_on_DialogBox_endReached"]
 

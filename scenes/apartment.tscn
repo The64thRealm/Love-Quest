@@ -733,6 +733,9 @@ tile_data = PoolIntArray( -327685, 3, 65542, -327684, 2, 0, -327683, 2, 1, -3276
 script = ExtResource( 9 )
 
 [node name="DialogBox" parent="base/GUI" instance=ExtResource( 7 )]
+margin_left = 510.0
+margin_right = -411.0
+margin_bottom = -511.0
 dialogFile = "res://assets/ui/dialogJsons/HarperDialog2.json"
 
 [node name="Camera2D" type="Camera2D" parent="base"]

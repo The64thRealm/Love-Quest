@@ -9,6 +9,7 @@ export(float) var decayPerSecond
 const patienceTweening = 0.1
 
 var patience
+var enabled = true
 onready var progressBar = get_node("NinePatchRect/TextureProgress")
 
 # Called when the node enters the scene tree for the first time.
@@ -60,6 +61,8 @@ func updateProgressDisplay():
 func _process(delta):
 	# print("progress: " + str(progressBar.value))
 	# print("actual progress: " + str(patience))
+	if !enabled:
+		return
 	updateProgress(delta)
 	updateColor()
 	if checkPatience():

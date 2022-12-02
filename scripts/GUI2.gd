@@ -17,6 +17,7 @@ func _process(delta):
 				player.cantMove()
 				player.idleDown()
 				$DialogBox.play()
+				$DialogBox/sprite.position = Vector2(150, 60)
 
 func OnApartAreaEntered(body):
 	action_state = "Open"

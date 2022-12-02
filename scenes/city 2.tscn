@@ -1029,6 +1029,10 @@ tile_data = PoolIntArray( -393224, 6, 0, -393223, 6, 0, -393222, 6, 0, -393221, 
 script = ExtResource( 4 )
 
 [node name="DialogBox" parent="base/GUI" instance=ExtResource( 5 )]
+anchor_right = 0.508
+anchor_bottom = 0.375
+margin_right = -416.192
+margin_bottom = -180.0
 dialogFile = "res://assets/ui/dialogJsons/HarperDialog1.json"
 
 [node name="buildings and stuff" type="TileMap" parent="base"]

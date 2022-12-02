@@ -101,6 +101,7 @@ func updateActions():
 			else:
 				get_node(buttons[i]).skipToLine = -1
 	elif determineIfClearLine():
+		forceChoice = false
 		for button in buttons:
 			var buttonNode = get_node(button)
 			buttonNode.skipToLine = -1
@@ -127,12 +128,15 @@ func show():
 	$NinePatchRect.visible = true
 
 func _input(event):
-	if !enabled:
-		return
+	
 	if event.is_action_pressed("interact"):
+		if !enabled:
+			return
+		if forceChoice:
+			return
 		nextLine()
-	if event.is_action_pressed("Action"):
-		nextLine()
+#	if event.is_action_pressed("Action"):
+#		nextLine()
 
 func loadDialog():
 	current_message = 0

@@ -39,7 +39,6 @@ __meta__ = {
 
 [node name="DialogBox" type="Control" parent="CanvasLayer"]
 script = ExtResource( 9 )
-reference_path = null
 buttons = [ "../TextureButton1", "../TextureButton2" ]
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/DialogBox"]

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/HEY.wav-2b93de43c0115c76c94e8307696ab263.sample"
+path="res://.import/HEY.wav-0a404d4fee8107a0c992e10aa2ec405e.sample"
 
 [deps]
 
-source_file="res://assets/HEY.wav"
-dest_files=[ "res://.import/HEY.wav-2b93de43c0115c76c94e8307696ab263.sample" ]
+source_file="res://audio/HEY.wav"
+dest_files=[ "res://.import/HEY.wav-0a404d4fee8107a0c992e10aa2ec405e.sample" ]
 
 [params]
 
