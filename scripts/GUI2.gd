@@ -14,7 +14,6 @@ func _process(delta):
 				harper.position = Vector2(16.0,33.0)
 				get_node("../buildings and stuff/addons").add_child(harper)
 				SFX.play_boom()
-				get_tree().get_root().get_node("Node2D/base/buildings and stuff/addons").add_child(harper)
 				player.cantMove()
 				player.idleDown()
 				$DialogBox.play()

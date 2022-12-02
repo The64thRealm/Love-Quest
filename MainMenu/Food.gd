@@ -22,3 +22,5 @@ func _on_Food_text_entered(text1):
 		editable = false
 		yield(get_tree().create_timer(2), "timeout")
 		OfficeTransition.change_scene("res://scenes/officeInitial.tscn")
+		yield(get_tree().create_timer(1), "timeout")
+		SFX.stop_music()

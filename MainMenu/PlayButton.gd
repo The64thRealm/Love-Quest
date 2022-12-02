@@ -3,7 +3,7 @@ extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	SFX.play_title()
 
 
 func _on_PlayButton_pressed():

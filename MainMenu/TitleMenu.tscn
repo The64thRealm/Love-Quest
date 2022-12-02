@@ -1,12 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://MainMenu/QuitButton.gd" type="Script" id=1]
 [ext_resource path="res://MainMenu/PlayButton.gd" type="Script" id=2]
 [ext_resource path="res://MainMenu/lovequest.png" type="Texture" id=3]
 [ext_resource path="res://MainMenu/citynight.png" type="Texture" id=4]
 [ext_resource path="res://MainMenu/PixelatedLove/PixelatedLove/pixelated-loveNew.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://audio/Title Screen.mp3" type="AudioStream" id=6]
-[ext_resource path="res://MainMenu/TitleMenu.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=2]
 size = 41
@@ -109,7 +107,6 @@ tracks/0/keys = {
 [node name="TitleMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 7 )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -168,9 +165,6 @@ autoplay = "Movedowntitle"
 playback_speed = 0.8
 anims/Movedowntitle = SubResource( 7 )
 anims/RESET = SubResource( 8 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
 
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_QuitButton_pressed"]

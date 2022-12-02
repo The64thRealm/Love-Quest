@@ -9,18 +9,23 @@ func play_train():
 func play_boom():
 	$vineboom.play()
 
-func play_music():
-	$walkingHome.play()
-	
 func stop_music():
 	$walkingHome.stop()
 	$titleMusic.stop()
+	$battle.stop()
 
+func play_music():
+	stop_music()
+	$walkingHome.play()
+	
 func play_title():
+	stop_music()
 	$titleMusic.play()
 
 func play_battle():
+	stop_music()
 	$battle.play()
-	
-func stop_battle():
-	$battle.stop()
+
+func play_end():
+	stop_music()
+	$endRoll.play()

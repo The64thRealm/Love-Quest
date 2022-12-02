@@ -2,7 +2,6 @@ extends "res://assets/ui/DialogButton.gd"
 
 var addPatience = 0;
 const defaultMinigamePath = "res://assets/ui/BattleMinigames/"
-var pattern = ""
 var battleMinigame
 
 func _ready():

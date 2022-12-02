@@ -4,6 +4,7 @@ export(bool) var start_focused = false
 
 var skipToLine = -1
 var dialogBoxPath = "../.."
+var pattern = ""
 
 func _ready():
 	dialogBoxPath

@@ -9,10 +9,12 @@ func _ready():
 	nextLine()
 
 func battleWon():
+	SFX.play_end()
 	get_tree().change_scene("res://scenes/win.tscn")
 	hide()
 
 func battleLost():
+	SFX.play_end()
 	get_tree().change_scene("res://scenes/loss.tscn")
 	hide()
 
