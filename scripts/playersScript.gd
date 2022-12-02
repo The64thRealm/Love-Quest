@@ -44,7 +44,6 @@ func idleUp():
 	$AnimationTree.set("parameters/Idle/blend_position", velocity)
 	
 func cantMove():
-	$AnimationTree.get("parameters/playback").travel("Idle")
 	can_move = false
 
 func canMove():
